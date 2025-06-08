@@ -32,6 +32,7 @@
     cursor: pointer;
   }
 
+
   #menu-toggle {
     display: none;
   }
@@ -55,6 +56,52 @@
       display: block;
     }
   }
+
+  /* toggle */
+  /* CSS */
+  .toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+  }
+
+  .toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    background-color: #ccc;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+  }
+
+  .slider::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    left: 3px;
+    bottom: 3px;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+
+  .toggle input:checked+.slider {
+    background-color: #2196F3;
+  }
+
+  .toggle input:checked+.slider::before {
+    transform: translateX(30px);
+  }
 </style>
 
 <body>
@@ -68,6 +115,11 @@
       <li><a href="#/Contact">Contact</a></li>
     </ul>
   </nav>
+
+  <label class="toggle">
+    <input type="checkbox" aria-label="Toggle switch">
+    <span class="slider"></span>
+  </label>
 </body>
 
 </html>
