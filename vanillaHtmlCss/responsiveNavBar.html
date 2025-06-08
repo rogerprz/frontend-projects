@@ -1,0 +1,73 @@
+<!-- HTML -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navigation Bar</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<!-- CSS -->
+<style>
+  /* CSS */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      background: white;
+      top: 60px;
+      right: 0;
+      width: 100%;
+    }
+
+    #menu-toggle:checked~.nav-links {
+      display: flex;
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+</style>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">MyApp</div>
+    <input type="checkbox" id="menu-toggle" />
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <ul class="nav-links">
+      <li><a href="#/Home">Home</a></li>
+      <li><a href="#/About">About</a></li>
+      <li><a href="#/Contact">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+
+</html>
