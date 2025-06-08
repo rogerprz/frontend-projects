@@ -102,6 +102,25 @@
   .toggle input:checked+.slider::before {
     transform: translateX(30px);
   }
+
+  /* Modal */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    place-items: center;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    min-width: 300px;
+  }
 </style>
 
 <body>
@@ -115,11 +134,23 @@
       <li><a href="#/Contact">Contact</a></li>
     </ul>
   </nav>
-
+  <h2>Toggle Switch</h2>
   <label class="toggle">
     <input type="checkbox" aria-label="Toggle switch">
     <span class="slider"></span>
   </label>
+  <h2> Modal example</h2>
+  <button id="open-modal">Open Modal</button>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-content">
+      <h2 id="modal-title">Modal Title</h2>
+      <p>Modal content goes here.</p>
+      <button id="close-modal">Close</button>
+    </div>
+  </div>
+  <script src="./index.js" defer></script>
+
 </body>
 
 </html>
