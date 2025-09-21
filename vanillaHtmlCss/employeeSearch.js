@@ -13,9 +13,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const query = this.value.toLowerCase();
     console.log(`Searching for: ${query}`);
   });
-  // add employees as rows to the table
+
   createTableBody(employees);
 });
+
+function searchButton() {
+  const searchInput = document.getElementById('search-input');
+  console.log('S:', searchInput.value);
+
+  const filteredEmployees = employees.filter((emp) => {
+    return emp.name.toLowerCase().includes(searchInput.value);
+  });
+  createTableBody(filteredEmployees);
+}
+
+function resetButton() {
+  const searchInput = document.getElementById('search-input');
+  searchInput.value = '';
+  createTableBody(employees);
+}
 function sortTable(type) {
   console.log(`Sorting by: ${type}`);
   if (sortType !== type) {
