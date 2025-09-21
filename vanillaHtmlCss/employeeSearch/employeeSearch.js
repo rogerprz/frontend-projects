@@ -5,11 +5,20 @@ let employees = [
   { id: 4, name: 'Diana Lopez', department: 'Engineering', age: 31 },
   { id: 5, name: 'Ethan Brown', department: 'Marketing', age: 27 }
 ];
+
 let filteredEmployees = [...employees];
 let isDescending = true; // toggle for sorting order
 let sortType = '';
+
+function debounce(fn, delay) {
+  let timer;
+  return function (...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('search-input').addEventListener('input', searchButton);
+  document.getElementById('search-input').addEventListener('input', debounce(searchButton, 300));
   document.getElementById('reset-btn').addEventListener('click', resetButton);
 
   const headers = document.querySelectorAll('#employee-table thead th');
