@@ -14,23 +14,24 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(`Searching for: ${query}`);
   });
 
-  createTableBody(employees);
+  createTableBody(filteredEmployees);
 });
 
 function searchButton() {
   const searchInput = document.getElementById('search-input');
   console.log('S:', searchInput.value);
 
-  const filteredEmployees = employees.filter((emp) => {
-    return emp.name.toLowerCase().includes(searchInput.value);
+  const newEmployees = [...filteredEmployees].filter((emp) => {
+    return emp.name.toLowerCase().includes(searchInput.value.toLowerCase());
   });
-  createTableBody(filteredEmployees);
+  createTableBody(newEmployees);
 }
 
 function resetButton() {
   const searchInput = document.getElementById('search-input');
   searchInput.value = '';
-  createTableBody(employees);
+  filteredEmployees = [...employees];
+  createTableBody(filteredEmployees);
 }
 function sortTable(type) {
   console.log(`Sorting by: ${type}`);
@@ -38,7 +39,7 @@ function sortTable(type) {
     isDescending = true;
     sortType = type;
   }
-  const sortedEmployees = employees.sort((a, b) => {
+  filteredEmployees = [...filteredEmployees].sort((a, b) => {
     if (typeof a[type] === 'string') {
       return isDescending ? a[type].localeCompare(b[type]) : b[type].localeCompare(a[type]);
     }
@@ -46,7 +47,7 @@ function sortTable(type) {
   });
   isDescending = !isDescending; // toggle for next sort
 
-  createTableBody(sortedEmployees);
+  createTableBody(filteredEmployees);
 }
 
 function createTableBody(currEmployees) {
