@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src=""></script>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="./employeeSearch.js"></script>
+  <link rel="stylesheet" href="./employeeSearch.css">
+  <div id="app">
+    <h1>Employee directory</h1>
+    <input type="text" id="search-input" placeholder="Search employees...">
+    <button onclick='searchButton()'>Search</button>
+    <table id="employee-table">
+      <thead>
+        <tr>
+          <th onclick="sortTable('id')" onKeyDown="if(event.key === 'Enter' || event.key === ' ') sortTable('id')">ID
+          </th>
+          <th onclick="sortTable('name')" onKeyDown="if(event.key === 'Enter' || event.key === ' ') sortTable('name')">
+            Name</th>
+          <th onclick="sortTable('age')" onKeyDown="if(event.key === 'Enter' || event.key === ' ') sortTable('age')">Age
+          </th>
+          <th onclick="sortTable('department')"
+            onKeyDown="if(event.key === 'Enter' || event.key === ' ') sortTable('department')">Department</th>
+        </tr>
+      </thead>
+      <tbody id="employee-table-body">
+        <!-- Employee rows will be populated here -->
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+#employee-table {
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+#employee-table th,
+#employee-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
