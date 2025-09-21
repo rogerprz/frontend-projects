@@ -15,20 +15,16 @@
     <h1>Employee directory</h1>
     <div>
       <input type="text" id="search-input" placeholder="Search employees...">
-      <button onclick="searchButton()">Search</button>
-      <button onclick="resetButton()">Reset</button>
+      <button id="search-btn">Search</button>
+      <button id="reset-btn">Reset</button>
     </div>
     <table id="employee-table">
       <thead>
         <tr>
-          <th onclick="sortTable('id')" onKeyDown="if(event.key === 'Enter' || event.key === ' ') sortTable('id')">ID
-          </th>
-          <th onclick="sortTable('name')" onKeyDown="if(event.key === 'Enter' || event.key === ' ') sortTable('name')">
-            Name</th>
-          <th onclick="sortTable('age')" onKeyDown="if(event.key === 'Enter' || event.key === ' ') sortTable('age')">Age
-          </th>
-          <th onclick="sortTable('department')"
-            onKeyDown="if(event.key === 'Enter' || event.key === ' ') sortTable('department')">Department</th>
+          <th data-key="id">ID</th>
+          <th data-key="name">Name</th>
+          <th data-key="age">Age</th>
+          <th data-key="department">Department</th>
         </tr>
       </thead>
       <tbody id="employee-table-body">

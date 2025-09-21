@@ -9,9 +9,19 @@ let filteredEmployees = [...employees];
 let isDescending = true; // toggle for sorting order
 let sortType = '';
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('search-input').addEventListener('input', function () {
-    const query = this.value.toLowerCase();
-    console.log(`Searching for: ${query}`);
+  document.getElementById('search-input').addEventListener('input', searchButton);
+  document.getElementById('reset-btn').addEventListener('click', resetButton);
+
+  const headers = document.querySelectorAll('#employee-table thead th');
+  headers.forEach((th) => {
+    th.addEventListener('click', () => sortTable(th.dataset.key));
+    th.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        sortTable(th.dataset.key);
+      }
+    });
+    th.setAttribute('tabindex', '0');
+    th.setAttribute('aria-sort', 'none');
   });
 
   createTableBody(filteredEmployees);
@@ -34,11 +44,11 @@ function resetButton() {
   createTableBody(filteredEmployees);
 }
 function sortTable(type) {
-  console.log(`Sorting by: ${type}`);
   if (sortType !== type) {
     isDescending = true;
     sortType = type;
   }
+  console.log(`Sorting by: ${type} - ${isDescending ? 'descending' : 'ascending'}`);
   filteredEmployees = [...filteredEmployees].sort((a, b) => {
     if (typeof a[type] === 'string') {
       return isDescending ? a[type].localeCompare(b[type]) : b[type].localeCompare(a[type]);
@@ -46,8 +56,20 @@ function sortTable(type) {
     return isDescending ? a[type] - b[type] : b[type] - a[type];
   });
   isDescending = !isDescending; // toggle for next sort
-
+  updateAriaSort(type, isDescending);
   createTableBody(filteredEmployees);
+}
+
+function updateAriaSort(activeKey, isDescending) {
+  const headers = document.querySelectorAll('#employee-table thead th');
+  headers.forEach((th) => {
+    const key = th.dataset.key;
+    if (key === activeKey) {
+      th.setAttribute('aria-sort', isDescending ? 'ascending' : 'descending');
+    } else {
+      th.setAttribute('aria-sort', 'none');
+    }
+  });
 }
 
 function createTableBody(currEmployees) {
