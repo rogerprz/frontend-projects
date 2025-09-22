@@ -1,4 +1,4 @@
-export const getDirectoryDate = () => {
+export const getDirectoryData = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve([

@@ -1,0 +1,8 @@
+.directory-row {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
