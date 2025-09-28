@@ -14,7 +14,6 @@ export const FileDirectory = () => {
   const fetchData = async () => {
     try {
       const res = await getDirectoryData();
-      console.log("R:", res);
       setData(res);
     } catch (err) {
       console.log("E:", err);
@@ -26,12 +25,12 @@ export const FileDirectory = () => {
   }, []);
 
   return (
-    <div className="main-container">
+    <ul className="main-container">
       {data.length > 0 &&
-        data.map((item, index) => {
-          return <ExtractData key={index} item={item} tabSize={0} />;
+        data.map((item) => {
+          return <ExtractData key={item.id} item={item} tabSize={0} />;
         })}
-    </div>
+    </ul>
   );
 };
 
@@ -44,7 +43,6 @@ function ExtractData({ item, tabSize }) {
 }
 
 function FileRow({ item, tabSize }) {
-  //   console.log("T:", tabSize, tabSize * 4);/
   return (
     <li style={{ paddingLeft: `${tabSize * 20}px` }} className="file-container">
       <>
@@ -57,18 +55,21 @@ function FileRow({ item, tabSize }) {
 
 function Directory({ item, tabSize }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const toggleExpand = () => setIsExpanded((prev) => !prev);
 
   return (
-    <ul>
-      <div
-        style={{ paddingLeft: `${tabSize * 20}px` }}
-        className="directory-row"
-      >
+    <li style={{ paddingLeft: `${tabSize * 20}px` }}>
+      <div className="directory-row">
         {isExpanded ? (
           <>
             <ChevronDown
               size={16}
-              onClick={() => setIsExpanded((prev) => !prev)}
+              tabIndex={0}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ")
+                  setIsExpanded((prev) => !prev);
+              }}
+              onClick={toggleExpand}
             />
             <FolderOpen size={16} />
           </>
@@ -76,20 +77,27 @@ function Directory({ item, tabSize }) {
           <>
             <ChevronRight
               size={16}
-              onClick={() => setIsExpanded((prev) => !prev)}
+              tabIndex={0}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ")
+                  setIsExpanded((prev) => !prev);
+              }}
+              onClick={toggleExpand}
             />
             <Folder size={16} />
           </>
         )}
         <span>{item.name}</span>
       </div>
-      {isExpanded === true &&
-        item.children.length > 0 &&
-        item.children.map((child) => {
-          return (
-            <ExtractData key={child.id} item={child} tabSize={tabSize + 1} />
-          );
-        })}
-    </ul>
+      {isExpanded === true && item.children.length > 0 && (
+        <ul>
+          {item.children.map((child) => {
+            return (
+              <ExtractData key={child.id} item={child} tabSize={tabSize + 1} />
+            );
+          })}
+        </ul>
+      )}
+    </li>
   );
 }

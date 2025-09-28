@@ -9,7 +9,7 @@ function App() {
       {/* <Header /> */}
       {/* <NestedComponents /> */}
       {/* <FlexBox /> */}
-      <FileDirectory />
+      {/* <FileDirectory /> */}
     </div>
   );
 }
