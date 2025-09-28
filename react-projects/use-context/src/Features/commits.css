@@ -1,0 +1,50 @@
+.commits-graph-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    /* flex-direction: row; */
+}
+.commits-col-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.commits-container {
+    display: flex;
+    gap: 4px;
+}
+.commit {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    gap: 3px;
+    border-radius: 5px;
+
+}
+.days-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.months-container {
+    display: flex;
+    justify-content: space-around;
+}
+.months-commits-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.no-commits{
+    background-color: gray;
+}
+.less-than-11-commits{
+    background-color: lightgreen;
+}
+.less-than-21-commits {
+    background-color: green;
+}
+.more-than-20-commits {
+    background-color: darkgreen;
+}

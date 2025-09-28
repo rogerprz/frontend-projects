@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { MyProvider } from './Provider';
+
+import { ApiProvider } from './context/ApiProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <MyProvider>
+  <ApiProvider>
     <App />
-  </MyProvider>
+  </ApiProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
