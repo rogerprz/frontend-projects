@@ -24,3 +24,23 @@ Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 function debounce(fn, wait) {
   // TODO
 }
+
+// INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
+const waitExample = 100;
+const rapidCallsExample = [
+  { atMs: 0, args: ['a'] },
+  { atMs: 50, args: ['b'] }
+]; // Expected: one callback with 'b' at approximately 150 ms
+const recordedCalls = [];
+function exampleCallback(...args) {
+  recordedCalls.push({ args, context: this });
+}
+const contextExample = { name: 'Alice' };
+
+// After implementing debounce, uncomment to try the example:
+// const debouncedExample = debounce(exampleCallback, waitExample);
+// rapidCallsExample.forEach(({ atMs, args }) => {
+//   setTimeout(() => debouncedExample.apply(contextExample, args), atMs);
+// });
+// setTimeout(() => console.log(recordedCalls), 200);
+// Cancellation scenario: call debouncedExample.cancel() before 150 ms.

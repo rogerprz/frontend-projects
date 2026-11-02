@@ -24,3 +24,12 @@ Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 function maxDistToClosest(seats) {
   // TODO
 }
+
+// INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
+const seatsExample = [1, 0, 0, 0, 1, 0, 1]; // Expected: 2
+const seatsTrailingGap = [1, 0, 0, 0]; // Expected: 3
+const seatsLeadingGap = [0, 0, 0, 1]; // Expected: 3
+const seatsMinimum = [0, 1]; // Expected: 1
+const seatsEvenGap = [1, 0, 0, 1]; // Expected: 1
+
+// console.log(maxDistToClosest(seatsExample));

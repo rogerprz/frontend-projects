@@ -23,3 +23,23 @@ Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 function transformEndorsements(endorsements) {
   // TODO
 }
+
+// INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
+const endorsementsExample = [
+  { skill: 'css', user: 'A' },
+  { skill: 'js', user: 'B' },
+  { skill: 'js', user: 'A' }
+]; // Expected: js -> ['B', 'A'] / 2; css -> ['A'] / 1
+const endorsementsEmpty = []; // Expected: []
+const endorsementsDuplicates = [
+  { skill: 'css', user: 'A' },
+  { skill: 'css', user: 'A' }
+]; // Expected: [{ skill: 'css', users: ['A', 'A'], count: 2 }]
+const endorsementsTied = [
+  { skill: 'css', user: 'A' },
+  { skill: 'js', user: 'B' }
+]; // Expected skill order: css, js
+const endorsementsSpecialNames = [{ skill: '__proto__', user: 'A' }];
+// Expected: one group whose skill is '__proto__'.
+
+// console.log(transformEndorsements(endorsementsExample));

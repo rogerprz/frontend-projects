@@ -28,3 +28,12 @@ const EMPLOYEES = [
   { id: 3, name: 'Charlie Kim', department: 'Product', age: 42 }
 ];
 // TODO: Build your table here.
+
+// INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
+// EMPLOYEES above is the primary input fixture.
+const searchQueryExample = 'ali'; // Matching ID: 1
+const searchQueryMixedCase = 'ALICE'; // Matching ID: 1
+const searchQueryNoResults = 'Zelda'; // No matching rows
+const searchQueryEmpty = ''; // All employees
+const sortColumnExample = 'age'; // Ascending IDs: [2, 1, 3]
+const emptyEmployees = []; // Empty-table scenario

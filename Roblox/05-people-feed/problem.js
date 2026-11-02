@@ -30,3 +30,12 @@ const PEOPLE_DATA = [
   { id: 5, name: 'Jessica Lee', title: 'Backend Engineer' }
 ];
 // TODO: Build your widget here.
+
+// INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
+// PEOPLE_DATA above is the primary input fixture.
+const pageSizeExample = 2;
+const loadingDelayMs = 600;
+const connectDelayMs = 400;
+const emptyPeople = []; // Empty-state scenario
+const singlePerson = [{ id: 99, name: 'Alex Lee', title: 'Frontend Engineer' }];
+// With PEOPLE_DATA and pageSizeExample, batches have IDs [1,2], [3,4], [5].

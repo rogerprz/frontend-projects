@@ -25,3 +25,14 @@ Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 function rotateTheBox(boxGrid) {
   // TODO
 }
+
+// INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
+const boxExample = [['#', '.', '#']]; // Expected: [['.'], ['#'], ['#']]
+const boxWithObstacle = [['#', '*', '.']]; // Expected: [['#'], ['*'], ['.']]
+const boxEmpty = [['.', '.']]; // Expected: [['.'], ['.']]
+const boxRectangular = [
+  ['#', '.', '*', '.'],
+  ['#', '#', '*', '.']
+]; // Expected: [['#', '.'], ['#', '#'], ['*', '*'], ['.', '.']]
+
+// console.log(rotateTheBox(boxExample));

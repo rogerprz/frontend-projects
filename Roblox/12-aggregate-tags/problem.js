@@ -22,3 +22,15 @@ Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 function aggregateTags(posts) {
   // TODO
 }
+
+// INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
+const postsExample = [
+  { id: 1, title: 'A', tags: ['web', 'js', 'web'] },
+  { id: 2, title: 'B', tags: ['web'] }
+]; // Expected: web -> count 2 / [1,2]; js -> count 1 / [1]
+const postsEmpty = []; // Expected: []
+const postsWithoutTags = [{ id: 1, title: 'Untagged', tags: [] }]; // []
+const postsTiedTags = [{ id: 1, title: 'A', tags: ['web', 'css'] }];
+// Expected tied tag order: css, web
+
+// console.log(aggregateTags(postsExample));

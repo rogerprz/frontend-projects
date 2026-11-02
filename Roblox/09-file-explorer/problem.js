@@ -32,3 +32,14 @@ const FILE_TREE = [
   { id: 'readme', name: 'README.md', type: 'file' }
 ];
 // TODO: Implement the explorer here.
+
+// INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
+// FILE_TREE above is the primary input fixture.
+const emptyFileTree = []; // Expected UI: No files
+const emptyFolderTree = [
+  { id: 'empty', name: 'Empty folder', type: 'folder', children: [] }
+];
+const singleFileTree = [
+  { id: 'single-file', name: 'notes.txt', type: 'file' }
+];
+// Pass any fixture as the explorer's input while practicing.

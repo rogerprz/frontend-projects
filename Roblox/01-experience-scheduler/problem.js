@@ -29,3 +29,13 @@ function canGenerateSchedule(preferences) {
 function generateSchedule(preferences) {
   // TODO: Part 2
 }
+
+// INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
+const possiblePreferences = { a: 3, b: 2 }; // Feasible; any valid ordering is accepted.
+const impossiblePreferences = { a: 4, b: 1 }; // false / null
+const singleExperiencePreferences = { a: 1 }; // true / ['a']
+const emptyPreferences = {}; // true / []
+const balancedPreferences = { a: 2, b: 2, c: 2 }; // Feasible
+
+// console.log(canGenerateSchedule(possiblePreferences));
+// console.log(generateSchedule(possiblePreferences));

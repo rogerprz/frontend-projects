@@ -24,3 +24,18 @@ Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 function groupActivity(logs) {
   // TODO
 }
+
+// INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
+const logsExample = [
+  { user: 'A', action: 'login', date: '2026-11-02' },
+  { user: 'A', action: 'view', date: '2026-11-02' }
+]; // Expected: one date/user group with actions ['login', 'view'] and count 2
+const logsEmpty = []; // Expected: []
+const logsUnsorted = [
+  { user: 'Bob', action: 'login', date: '2026-11-03' },
+  { user: 'Alice', action: 'view', date: '2026-11-02' },
+  { user: 'Bob', action: 'view', date: '2026-11-02' },
+  { user: 'Alice', action: 'view', date: '2026-11-02' }
+]; // Dates: 02 then 03; on 02 users: Alice then Bob; Alice's count: 2
+
+// console.log(groupActivity(logsExample));

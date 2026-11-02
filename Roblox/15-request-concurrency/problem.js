@@ -26,3 +26,33 @@ Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 async function fetchWithConcurrency(urls, limit, fetchFn) {
   // TODO
 }
+
+// INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
+const urlsExample = ['A', 'B', 'C'];
+const limitExample = 2;
+const emptyUrls = [];
+const duplicateUrls = ['A', 'A', 'B'];
+const invalidLimits = [0, -1, 1.5, NaN];
+const mockResponses = {
+  A: { delayMs: 80, value: 'Result A' },
+  B: { delayMs: 20, value: 'Result B' },
+  C: { delayMs: 10, error: 'Request C failed' }
+};
+// Fixture only: simulates requests; does not implement concurrency scheduling.
+const requestEvents = [];
+function mockFetch(url) {
+  const response = mockResponses[url];
+  requestEvents.push({ event: 'start', url });
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      requestEvents.push({ event: 'finish', url });
+      if (!response) reject(new Error(`Unknown URL: ${url}`));
+      else if (response.error) reject(new Error(response.error));
+      else resolve(response.value);
+    }, response ? response.delayMs : 0);
+  });
+}
+// Expected result order: fulfilled A, fulfilled B, rejected C.
+// With limit 2, C starts after B finishes while A is still in flight.
+// fetchWithConcurrency(urlsExample, limitExample, mockFetch).then(console.log);
+// Clear requestEvents.length = 0 before repeating an observation.

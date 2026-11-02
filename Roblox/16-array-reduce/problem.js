@@ -27,3 +27,23 @@ Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 function myReduce(array, callback, initialValue) {
   // TODO
 }
+
+// INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
+const numbersExample = [1, 2, 3];
+const emptyNumbers = [];
+const sparseNumbers = [1, , 3]; // A hole, not an explicit undefined entry
+const allHoles = new Array(3);
+const sumCallback = (accumulator, value) => accumulator + value;
+const initialSum = 0;
+const initialEmptyResult = 5;
+const explicitlyUndefined = undefined;
+const collectValues = (accumulator, value) => [...(accumulator ?? []), value];
+
+// console.log(myReduce(numbersExample, sumCallback, initialSum)); // 6
+// console.log(myReduce(numbersExample, sumCallback)); // 6
+// console.log(myReduce(emptyNumbers, sumCallback, initialEmptyResult)); // 5
+// console.log(myReduce(sparseNumbers, sumCallback, initialSum)); // 4
+// myReduce(allHoles, sumCallback); // Expected: TypeError
+// myReduce(emptyNumbers, sumCallback); // Expected: TypeError
+// myReduce(numbersExample, null, initialSum); // Expected: TypeError
+// console.log(myReduce([1], collectValues, explicitlyUndefined)); // [1]
