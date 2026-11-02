@@ -1,4 +1,7 @@
 /*
+LeetCode: 1861. Rotating the Box
+Difficulty: Medium
+Official problem: https://leetcode.com/problems/rotating-the-box/
 Rotate the box — Mock interview exercise
 Suggested time: 35 minutes
 Adapted practice prompt; not an official current Roblox assessment.

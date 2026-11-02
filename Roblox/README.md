@@ -32,3 +32,10 @@
 People Feed and Employee Search include HTML/CSS reference pages. React files require a React practice environment. Original source paths and GitHub links remain in comments. Kanban is a new prompt without a reference solution.
 
 [Practice checklist](PROBLEMS.md)
+
+## Official LeetCode links
+
+| Folder | Problem | Difficulty |
+|---|---|---|
+| 02-seat-distance | [849. Maximize Distance to Closest Person](https://leetcode.com/problems/maximize-distance-to-closest-person/) | Medium |
+| 03-rotate-box | [1861. Rotating the Box](https://leetcode.com/problems/rotating-the-box/) | Medium |

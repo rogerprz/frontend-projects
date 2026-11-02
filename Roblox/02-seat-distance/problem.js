@@ -1,4 +1,7 @@
 /*
+LeetCode: 849. Maximize Distance to Closest Person
+Difficulty: Medium
+Official problem: https://leetcode.com/problems/maximize-distance-to-closest-person/
 Maximize distance to closest person — Mock interview exercise
 Suggested time: 25 minutes
 Adapted practice prompt; not an official current Roblox assessment.
@@ -12,6 +15,8 @@ Return that maximum distance; distance between indices i and j is abs(i-j).
 Constraints: 2 <= seats.length <= 20000. Do not mutate seats.
 Examples:
 [1,0,0,0,1,0,1] -> 2
+[0,0,0,1,0,1,0,1] -> 2
+
 [1,0,0,0] -> 3
 [0,1] -> 1
 Consider leading empty seats, trailing empty seats, and interior gaps.
@@ -20,11 +25,6 @@ Explain your time/space complexity and test boundary cases.
 Before coding: clarify assumptions and describe your approach out loud.
 Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 */
-
-function maxDistToClosest(seats) {
-  // TODO
-}
-
 // INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
 const seatsExample = [1, 0, 0, 0, 1, 0, 1]; // Expected: 2
 const seatsTrailingGap = [1, 0, 0, 0]; // Expected: 3
@@ -32,4 +32,25 @@ const seatsLeadingGap = [0, 0, 0, 1]; // Expected: 3
 const seatsMinimum = [0, 1]; // Expected: 1
 const seatsEvenGap = [1, 0, 0, 1]; // Expected: 1
 
-// console.log(maxDistToClosest(seatsExample));
+function maxDistToClosest(seats) {
+  let max = 0;
+  let l = seats.findIndex((seat) => seat === 1);
+  const N = seats.length;
+
+  for (let i = 0; i < N; i++) {
+    const seat = seats[i];
+
+    if (seat === 1) {
+      let diff = 0;
+      // start scenario with zeros, [0,0,1]
+      if (seats[0] === 0 && left === 0) {
+        // check current index,
+        diff = i;
+      } else {
+        diff;
+      }
+    }
+  }
+}
+
+console.log(maxDistToClosest(seatsExample));
