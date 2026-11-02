@@ -3,7 +3,7 @@ Implement debounce — Mock interview exercise
 Suggested time: 25 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/coding-algorithms/asyncCallbacksPromises/debounce.js | https://github.com/rogerprz/coding-algorithms/blob/main/asyncCallbacksPromises/debounce.js
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/11-debounce/debounce.js
+Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/14-debounce/debounce.js
 
 Implement debounce(fn, wait), returning a trailing-edge debounced function.
 Requirements:

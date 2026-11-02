@@ -3,7 +3,7 @@ Fetch with bounded concurrency — Mock interview exercise
 Suggested time: 35 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/coding-algorithms/Javascript/AsyncPromises/rateLimiting.js | https://github.com/rogerprz/coding-algorithms/blob/main/Javascript/AsyncPromises/rateLimiting.js
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/12-request-concurrency/rateLimiting.js
+Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/15-request-concurrency/rateLimiting.js
 
 Implement fetchWithConcurrency(urls, limit, fetchFn).
 fetchFn(url) returns a Promise for that URL's result. Inject it for testing.

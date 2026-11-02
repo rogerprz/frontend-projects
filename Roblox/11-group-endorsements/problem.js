@@ -3,7 +3,7 @@ Group endorsements — Mock interview exercise
 Suggested time: 20 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/coding-algorithms/LinkedInPractice/jsUI/endorsement.js | https://github.com/rogerprz/coding-algorithms/blob/main/LinkedInPractice/jsUI/endorsement.js
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/08-group-endorsements/endorsement.js
+Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/11-group-endorsements/endorsement.js
 
 Implement transformEndorsements(endorsements).
 Input: an array of { skill: string, user: string } records.

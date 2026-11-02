@@ -3,7 +3,7 @@ Debounced React search — Mock interview exercise
 Suggested time: 35 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/coding-algorithms/practice/debounce.jsx | https://github.com/rogerprz/coding-algorithms/blob/main/practice/debounce.jsx
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/03-react-debounced-search/debounce.jsx
+Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/08-react-debounced-search/debounce.jsx
 
 Implement useDebounce(value, delay) and a React Search component.
 Requirements:

@@ -3,7 +3,7 @@ Country and capital matching — Mock interview exercise
 Suggested time: 45 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/tech-screen-solutions/oleria/matchingPairs.jsx | https://github.com/rogerprz/tech-screen-solutions/blob/main/oleria/matchingPairs.jsx
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/04-country-capital-game/matchingPairs.jsx
+Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/07-country-capital-game/matchingPairs.jsx
 
 Implement a React CountryCapitalGame({ data }) component.
 Input example: { Japan: 'Tokyo', France: 'Paris', Italy: 'Rome' }.

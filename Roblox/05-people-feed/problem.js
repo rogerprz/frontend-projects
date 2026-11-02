@@ -3,7 +3,7 @@ People feed — Mock interview exercise
 Suggested time: 45 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/coding-algorithms/LinkedInPractice/PeopleFeed/peopleFeed.js | https://github.com/rogerprz/coding-algorithms/blob/main/LinkedInPractice/PeopleFeed/peopleFeed.js
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/01-people-feed/peopleFeed.js
+Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/05-people-feed/peopleFeed.js
 
 Build a people-you-may-know widget using vanilla HTML, CSS, and JavaScript.
 Use the provided PEOPLE_DATA below as a simulated API response.

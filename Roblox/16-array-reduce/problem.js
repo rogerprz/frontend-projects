@@ -3,7 +3,7 @@ Implement array reduce — Mock interview exercise
 Suggested time: 30 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/coding-algorithms/JsPrototype/reduce.js | https://github.com/rogerprz/coding-algorithms/blob/main/JsPrototype/reduce.js
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/13-array-reduce/reduce.js
+Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/16-array-reduce/reduce.js
 
 Implement myReduce(array, callback, initialValue?) without using native reduce.
 Use a standalone function; do not modify Array.prototype.

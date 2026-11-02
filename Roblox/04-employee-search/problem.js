@@ -3,7 +3,7 @@ Employee search and sorting — Mock interview exercise
 Suggested time: 45 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/frontend-projects/vanillaHtmlCss/employeeSearch/employeeSearch.js | https://github.com/rogerprz/frontend-projects/blob/main/vanillaHtmlCss/employeeSearch/employeeSearch.js
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/02-employee-search/employeeSearch.js
+Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/04-employee-search/employeeSearch.js
 
 Build an accessible employee table using vanilla HTML, CSS, and JavaScript.
 Requirements:

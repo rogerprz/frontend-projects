@@ -3,7 +3,7 @@ Roblox experience scheduler — Mock interview exercise
 Suggested time: 45 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/tech-screen-solutions/roblox/scheduler.js | https://github.com/rogerprz/tech-screen-solutions/blob/main/roblox/scheduler.js
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/14-experience-scheduler/scheduler.js
+Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/01-experience-scheduler/scheduler.js
 
 Users request repetitions of experience IDs. Generate a schedule with no adjacent equal IDs.
 Input: an object mapping unique experience IDs to positive integer counts.

@@ -3,7 +3,7 @@ Product page with independent requests — Mock interview exercise
 Suggested time: 45 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/coding-algorithms/practice/multiFetchReact.tsx | https://github.com/rogerprz/coding-algorithms/blob/main/practice/multiFetchReact.tsx
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/06-product-api-requests/multiFetchReact.tsx
+Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/10-product-api-requests/multiFetchReact.tsx
 
 Build a React ProductDetailsPage({ productId, api }) component.
 API contract (inject mocks instead of making real network calls):

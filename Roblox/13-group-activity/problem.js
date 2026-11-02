@@ -3,7 +3,7 @@ Group activity by date and user — Mock interview exercise
 Suggested time: 25 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/coding-algorithms/LinkedInPractice/jsUI/mergeByDate.js | https://github.com/rogerprz/coding-algorithms/blob/main/LinkedInPractice/jsUI/mergeByDate.js
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/10-group-activity/mergeByDate.js
+Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/13-group-activity/mergeByDate.js
 
 Implement groupActivity(logs).
 Input: [{ user: string, action: string, date: 'YYYY-MM-DD' }]. Dates are valid.

@@ -3,7 +3,7 @@ Expandable file explorer — Mock interview exercise
 Suggested time: 45 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/frontend-projects/react-projects/use-context/src/Components/FileDirectory.js | https://github.com/rogerprz/frontend-projects/blob/main/react-projects/use-context/src/Components/FileDirectory.js
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/05-file-explorer/FileDirectory.js
+Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/09-file-explorer/FileDirectory.js
 
 Build a recursive React file explorer from the sample tree below.
 A folder has children; a file has no children. IDs are unique.

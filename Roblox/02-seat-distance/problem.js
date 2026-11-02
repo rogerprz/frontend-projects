@@ -3,7 +3,7 @@ Maximize distance to closest person — Mock interview exercise
 Suggested time: 25 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/leetcode-solutions/0849-maximize-distance-to-closest-person/0849-maximize-distance-to-closest-person.js | https://github.com/rogerprz/leetcode-solutions/blob/main/0849-maximize-distance-to-closest-person/0849-maximize-distance-to-closest-person.js
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/15-seat-distance/0849-maximize-distance-to-closest-person.js
+Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/02-seat-distance/0849-maximize-distance-to-closest-person.js
 
 Implement maxDistToClosest(seats).
 seats is an array of 0 (empty) and 1 (occupied), with at least one of each.

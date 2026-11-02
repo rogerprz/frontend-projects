@@ -3,7 +3,7 @@ Aggregate post tags — Mock interview exercise
 Suggested time: 20 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/coding-algorithms/LinkedInPractice/jsUI/tagPosts.js | https://github.com/rogerprz/coding-algorithms/blob/main/LinkedInPractice/jsUI/tagPosts.js
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/09-aggregate-tags/tagPosts.js
+Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/12-aggregate-tags/tagPosts.js
 
 Implement aggregateTags(posts).
 Input: [{ id: number, title: string, tags: string[] }], with unique post IDs.

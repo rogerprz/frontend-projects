@@ -3,7 +3,7 @@ Rotate the box — Mock interview exercise
 Suggested time: 35 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/leetcode-solutions/1861-rotating-the-box/1861-rotating-the-box.js | https://github.com/rogerprz/leetcode-solutions/blob/main/1861-rotating-the-box/1861-rotating-the-box.js
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/16-rotate-box/1861-rotating-the-box.js
+Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/03-rotate-box/1861-rotating-the-box.js
 
 Implement rotateTheBox(boxGrid).
 Input is a nonempty m-by-n matrix: '#' stone, '*' fixed obstacle, '.' empty.
