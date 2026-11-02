@@ -1,0 +1,9 @@
+/* Original: /Users/roger/Sites/frontend-projects/react-projects/use-context/src/Styles/file-directory.css | https://github.com/rogerprz/frontend-projects/blob/main/react-projects/use-context/src/Styles/file-directory.css */
+.directory-row {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
