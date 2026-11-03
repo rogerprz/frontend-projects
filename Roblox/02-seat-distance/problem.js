@@ -16,7 +16,9 @@ Constraints: 2 <= seats.length <= 20000. Do not mutate seats.
 Examples:
 [1,0,0,0,1,0,1] -> 2
 [0,0,0,1,0,1,0,1] -> 2
-
+[0,0,0,1,0,1,0,1] start 
+[1,0,0,0,1,0,1] mid 
+[1,0,1,0,1,0,0,0] end 
 [1,0,0,0] -> 3
 [0,1] -> 1
 Consider leading empty seats, trailing empty seats, and interior gaps.
@@ -33,24 +35,30 @@ const seatsMinimum = [0, 1]; // Expected: 1
 const seatsEvenGap = [1, 0, 0, 1]; // Expected: 1
 
 function maxDistToClosest(seats) {
-  let max = 0;
-  let l = seats.findIndex((seat) => seat === 1);
   const N = seats.length;
+  let max = 0;
+  let l = 0;
 
   for (let i = 0; i < N; i++) {
     const seat = seats[i];
 
     if (seat === 1) {
-      let diff = 0;
-      // start scenario with zeros, [0,0,1]
-      if (seats[0] === 0 && left === 0) {
-        // check current index,
-        diff = i;
-      } else {
-        diff;
+      let diff = i; // setup first half l
+
+      // middle cases
+      if (seats[0] === 1 || left !== 0) {
+        diff = Math.floor((i - left) / 2);
       }
+
+      diff = Math.max(max, diff);
+      l = i;
+    }
+
+    if (seats[N - 1] === 0 && i == N - 1) {
     }
   }
+
+  return max;
 }
 
 console.log(maxDistToClosest(seatsExample));

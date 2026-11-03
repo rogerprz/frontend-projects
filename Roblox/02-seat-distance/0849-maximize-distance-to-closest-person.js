@@ -1,3 +1,9 @@
+/*
+LeetCode: 849. Maximize Distance to Closest Person
+Difficulty: Medium
+Official problem: https://leetcode.com/problems/maximize-distance-to-closest-person/
+*/
+
 /* Original: /Users/roger/Sites/leetcode-solutions/0849-maximize-distance-to-closest-person/0849-maximize-distance-to-closest-person.js | https://github.com/rogerprz/leetcode-solutions/blob/main/0849-maximize-distance-to-closest-person/0849-maximize-distance-to-closest-person.js */
 /**
  * @param {number[]} seats
