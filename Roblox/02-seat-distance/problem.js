@@ -39,25 +39,6 @@ function maxDistToClosest(seats) {
   let max = 0;
   let l = 0;
 
-  for (let i = 0; i < N; i++) {
-    const seat = seats[i];
-
-    if (seat === 1) {
-      let diff = i; // setup first half l
-
-      // middle cases
-      if (seats[0] === 1 || left !== 0) {
-        diff = Math.floor((i - left) / 2);
-      }
-
-      diff = Math.max(max, diff);
-      l = i;
-    }
-
-    if (seats[N - 1] === 0 && i == N - 1) {
-    }
-  }
-
   return max;
 }
 
