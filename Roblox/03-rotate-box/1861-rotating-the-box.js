@@ -22,17 +22,17 @@ var rotateTheBox = function (boxGrid) {
   const WALL = '*';
 
   for (let row = 0; row < rows; row++) {
-    let resColIdx = cols - 1;
+    let landingRow = cols - 1;
     for (let col = cols - 1; col >= 0; col--) {
-      let resRowIdx = rows - 1 - row;
+      let resultCol = rows - 1 - row;
       const curr = boxGrid[row][col];
       if (curr === STONE) {
-        res[resColIdx][resRowIdx] = curr;
-        resColIdx--;
+        res[landingRow][resultCol] = curr;
+        landingRow--;
       }
       if (curr === WALL) {
-        res[col][resRowIdx] = curr;
-        resColIdx = col - 1;
+        res[col][resultCol] = curr;
+        landingRow = col - 1;
       }
     }
   }
