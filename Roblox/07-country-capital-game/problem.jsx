@@ -23,4 +23,6 @@ Before coding: clarify assumptions and describe your approach out loud.
 Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 */
 
+import React, { useState } from 'react';
+
 // TODO: Implement CountryCapitalGame here.

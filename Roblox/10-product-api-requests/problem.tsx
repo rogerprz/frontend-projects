@@ -25,4 +25,6 @@ Before coding: clarify assumptions and describe your approach out loud.
 Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 */
 
+import React, { useEffect, useState } from 'react';
+
 // TODO: Implement ProductDetailsPage and API mocks here.

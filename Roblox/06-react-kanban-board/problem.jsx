@@ -62,6 +62,8 @@ OPTIONAL FOLLOW-UPS (after the core requirements work)
 - Save moves through an API with optimistic updates and rollback on failure.
 */
 
+import React, { useState } from 'react';
+
 const SAMPLE_TASKS = [
   { id: 'task-1', title: 'Write tests', status: 'todo' },
   { id: 'task-2', title: 'Build search', status: 'in-progress' },

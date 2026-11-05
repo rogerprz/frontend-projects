@@ -40,30 +40,14 @@ const boxGrid2 = [["#",".","*","."],
                   [".","."]]
 */
 function rotateTheBox(boxGrid) {
+  const WALL = '*';
+  const STONE = '#';
+
   let rows = boxGrid.length;
   let cols = boxGrid[0].length;
-  const STONE = '#';
-  const WALL = '*';
-  console.log('B:', boxGrid);
-  let dp = new Array(cols).fill(0).map(() => new Array(rows).fill('.'));
-  console.log('DP:', dp);
 
-  for (let row = 0; row < rows; row++) {
-    let currColIdx = cols - 1;
-    for (let col = cols - 1; col >= 0; col--) {
-      let currRowIdx = rows - 1 - row;
-      const curr = boxGrid[row][col];
-      if (curr === STONE) {
-        dp[currColIdx][currRowIdx] = curr;
-        currColIdx--;
-      }
-      if (curr === WALL) {
-        dp[col][currRowIdx] = curr;
-        currColIdx = col - 1;
-      }
-    }
-  }
-  return dp;
+  const res = new Array(cols).fill(0).map(() => new Array(rows).fill('.'));
+  console.log('R:', res);
 }
 
 // INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
