@@ -48,6 +48,24 @@ function rotateTheBox(boxGrid) {
 
   const res = new Array(cols).fill(0).map(() => new Array(rows).fill('.'));
   console.log('R:', res);
+  for (let row = 0; row < rows; row++) {
+    let endRowIdx = cols - 1;
+
+    for (let col = cols - 1; col >= 0; col--) {
+      let endColIdx = rows - row - 1;
+      const curr = boxGrid[row][col];
+
+      if (curr === STONE) {
+        res[endRowIdx][endColIdx] = STONE;
+        endRowIdx--;
+      } else if (curr === WALL) {
+        res[col][endColIdx] = WALL;
+
+        endRowIdx = col - 1;
+      }
+    }
+  }
+  return res;
 }
 
 // INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
@@ -59,4 +77,4 @@ const boxRectangular = [
   ['#', '#', '*', '.']
 ]; // Expected: [['#', '.'], ['#', '#'], ['*', '*'], ['.', '.']]
 
-console.log(rotateTheBox(boxExample));
+rotateTheBox(boxExample).map((row) => console.log(row));
