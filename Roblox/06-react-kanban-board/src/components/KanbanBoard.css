@@ -13,9 +13,29 @@
   flex-direction: column;
   border: 5px white solid;
   width: 100%;
+  gap: 20px;
+  padding: 20px;
 }
 .board-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.card-container {
+  border: 5px solid green;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 200px;
+}
+.description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card-description {
+  font-size: medium;
 }
