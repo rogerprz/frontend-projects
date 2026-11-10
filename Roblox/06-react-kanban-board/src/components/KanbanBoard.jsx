@@ -1,3 +1,4 @@
+import './KanbanBoard.css';
 import React, { useState } from 'react';
 
 const COLUMN_NAMES = [
@@ -14,12 +15,12 @@ export default function KanbanBoard() {
   const [columns, setColumns] = useState(COLUMN_NAMES);
   const [tasks, setTasks] = useState(TASKS);
   return (
-    <>
+    <section className="board-container">
       <Columns columns={columns} />
       {tasks.map((task) => {
         return <div key={task.id}>{task.title}</div>;
       })}
-    </>
+    </section>
   );
 }
 
@@ -29,7 +30,7 @@ function Columns({ columns }) {
       {columns.map((col) => {
         return (
           <div className="col-container" key={col.id}>
-            <div className="col-header">{col.name}</div>
+            <h2 className="col-header">{col.name}</h2>
           </div>
         );
       })}
