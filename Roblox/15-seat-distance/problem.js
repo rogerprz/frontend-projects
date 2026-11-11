@@ -15,10 +15,9 @@ Return that maximum distance; distance between indices i and j is abs(i-j).
 Constraints: 2 <= seats.length <= 20000. Do not mutate seats.
 Examples:
 [1,0,0,0,1,0,1] -> 2
-[0,0,0,1,0,1,0,1] -> 2
-[0,0,0,1,0,1,0,1] start 
-[1,0,0,0,1,0,1] mid 
-[1,0,1,0,1,0,0,0] end 
+[0,0,0,1,0,1,0,1] -> 3 (leading gap)
+[1,0,0,0,1,0,1] -> 2 (interior gap)
+[1,0,1,0,1,0,0,0] -> 3 (trailing gap)
 [1,0,0,0] -> 3
 [0,1] -> 1
 Consider leading empty seats, trailing empty seats, and interior gaps.

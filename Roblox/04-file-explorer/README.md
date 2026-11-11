@@ -1,6 +1,6 @@
 # Expandable file explorer
 
-Runnable unsolved React practice. Implement [`problem.jsx`](problem.jsx); the browser displays the starter and expandable requirements. Reference files remain separate and are not mounted.
+React practice with two browser views: **Solution** runs [`solution.jsx`](solution.jsx), and **Practice** runs your editable [`problem.jsx`](problem.jsx). The requirements appear in both views. Solution opens by default; switching views resets the displayed component’s state.
 
 ```sh
 cd /Users/roger/Sites/frontend-projects/Roblox/04-file-explorer
@@ -8,7 +8,7 @@ npm install
 npm run dev
 ```
 
-Run `npm run build` to verify compilation. 
+Run `npm run build` to verify compilation.
 
 In this checkout, `node_modules` links to exercise 01’s installed dependencies. For an independent install, remove that symlink and run `npm install`.
 

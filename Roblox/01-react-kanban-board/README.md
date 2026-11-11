@@ -16,7 +16,7 @@ npm run dev
 
 ## Work here
 
-- `src/App.jsx` mounts `src/components/KanbanBoard.jsx`, the active attempt.
+- `src/App.jsx` provides two views: **Solution** mounts `src/components/BoardReference.jsx` by default; **Practice** mounts `src/components/KanbanBoard.jsx`, your active attempt. Switching views resets component state.
 - `src/data/kanbanData.js` exports `COLUMNS`, `TASKS`, `SANITIZED_COL_NAMES`, and `tasksAPI()`.
 - `src/components/AddTaskForm.jsx`, `KanbanColumn.jsx`, and `TaskCard.jsx` are empty component placeholders.
 - `src/components/KanbanBoardSolution.jsx` is a partial earlier attempt. It is not mounted and still imports obsolete `columns` and `BOARDS` exports. Its add-task modal is a placeholder; treat it as review/debugging material, not a working solution.
@@ -28,7 +28,7 @@ npm run dev
 
 ## Progress and next steps
 
-The active board fetches and stores the API response. Rendering and interactions remain unfinished. Fixture task titles describe sample content; they do not indicate completed practice requirements.
+Your Practice board fetches and stores the API response. Its rendering and interactions remain unfinished. The separate Solution view implements loading/error handling, columns, adding, moving, and deleting tasks. Fixture task titles describe sample content; they do not indicate completed practice requirements.
 
 - [ ] Handle loading, error, and empty API states.
 - [ ] Render three columns, cards, descriptions, and derived counts.

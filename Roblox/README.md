@@ -1,6 +1,6 @@
 # Roblox interview practice
 
-17 exercises prioritized for React and vanilla JavaScript practice. Folder numbers match the study order below. Start with the linked prompt in each folder. Exercise 01 has a runnable React + Vite workspace and an active implementation under `src/`.
+17 exercises prioritized for React and vanilla JavaScript practice. Folder numbers match the study order below. Start with the linked prompt in each folder. React exercises 01–05 and 17 each have a runnable React + Vite workspace with Solution and Practice views.
 
 [Notion study guide](https://app.notion.com/p/40c524cc147181788297fc091cc896ba?pvs=204)
 
@@ -57,7 +57,7 @@ The sections above define study order; folder numbers match that order; completi
 
 ## Using these files
 
-People Feed and Employee Search include HTML/CSS reference pages. Exercise 01 includes its own React + Vite environment; exercises 02–05 also include their own React + Vite environments. Original source paths and GitHub links remain in comments. Kanban includes a partial earlier attempt, not a finished reference solution.
+People Feed and Employee Search include HTML/CSS reference pages. React exercises 01–05 and 17 each include a Vite environment. Run `npm install`, then `npm run dev` inside the exercise folder. Solution opens by default; Practice runs your editable starter. Original source paths and GitHub links remain in comments. Each React exercise has a working solution separate from your starter. Older saved attempts are retained as additional review material; they are not the implementations shown in Solution.
 
 [Practice checklist](PROBLEMS.md)
 

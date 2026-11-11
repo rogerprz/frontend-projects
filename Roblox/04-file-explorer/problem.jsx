@@ -3,10 +3,11 @@ Expandable file explorer — Mock interview exercise
 Suggested time: 45 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/frontend-projects/react-projects/use-context/src/Components/FileDirectory.js | https://github.com/rogerprz/frontend-projects/blob/main/react-projects/use-context/src/Components/FileDirectory.js
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/04-file-explorer/FileDirectory.js
+Earlier saved attempt (separate from the Solution view): /Users/roger/Sites/frontend-projects/Roblox/04-file-explorer/FileDirectory.js
 
 Build a recursive React file explorer from the sample tree below.
-A folder has children; a file has no children. IDs are unique.
+A folder has a children array (possibly empty); a file has no children. IDs are unique.
+The solution includes an additional empty folder to demonstrate the empty-folder state.
 Requirements:
 1. Render root entries, with all folders collapsed initially.
 2. Toggle folders independently; nested folders can contain files or folders.
@@ -17,6 +18,9 @@ Requirements:
 7. Do not mutate the input. Add semantic markup and styling as needed.
 Example: expand src, expand components, collapse src, reopen src: components stays open.
 Follow-up: discuss fetching folder children only when expanded.
+
+Practice runs this problem file. Solution runs solution.jsx.
+The older saved attempt is separate from the working solution.
 
 Before coding: clarify assumptions and describe your approach out loud.
 Before finishing: try examples and edge cases; discuss complexity/tradeoffs.

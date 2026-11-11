@@ -5,7 +5,7 @@ Build a recursive React renderer from a nested JSON document. Start with [proble
 Copied from your existing exercise:
 - [Mock API](nested-components.js): original fixture, returned after a two-second delay.
 - [Earlier reference attempt](NestedComponents.reference.jsx): copied with its import adjusted. It mutates children and wraps text in divs, so treat it as an attempt to review after practicing.
-- The JSON fixture was extracted without changing the original data.
+- The JSON fixture is the input for both the starter and the working solution. Its heading text and logo are sample document content, not instructions for the exercise.
 
 Original sources: [renderer](https://github.com/rogerprz/frontend-projects/blob/main/react-projects/use-context/src/Components/NestedComponents.js) and [fixture](https://github.com/rogerprz/frontend-projects/blob/main/react-projects/use-context/src/data/nested-components.js).
 
@@ -23,4 +23,4 @@ npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite. Edit `problem.jsx`; changes reload automatically. The page shows the requirements and an initially empty document output area until you implement the renderer. Run `npm run build` for a production build.
+Open the local URL printed by Vite. Edit `problem.jsx`; changes reload automatically. Solution opens by default and renders `document.json` using `solution.jsx`. Select Practice to run your `problem.jsx`; its starter returns `null`, so that view has no document content until you implement it. Switching views resets component state. Run `npm run build` for a production build.

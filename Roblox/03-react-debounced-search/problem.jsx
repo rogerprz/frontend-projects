@@ -3,7 +3,7 @@ Debounced React search — Mock interview exercise
 Suggested time: 35 minutes
 Adapted practice prompt; not an official current Roblox assessment.
 Original: /Users/roger/Sites/coding-algorithms/practice/debounce.jsx | https://github.com/rogerprz/coding-algorithms/blob/main/practice/debounce.jsx
-Reference copy (open after attempting): /Users/roger/Sites/frontend-projects/Roblox/03-react-debounced-search/debounce.jsx
+Earlier saved attempt (separate from the Solution view): /Users/roger/Sites/frontend-projects/Roblox/03-react-debounced-search/debounce.jsx
 
 Implement useDebounce(value, delay) and a React Search component.
 Requirements:
@@ -16,6 +16,9 @@ Requirements:
 Example: typing 'r', 'ro', 'rob' 100 ms apart produces only the final debounced query.
 Use React hooks without debounce libraries. Add accessible input labeling.
 Follow-up: explain how you would prevent stale network responses.
+
+Practice runs this problem file. Solution runs solution.jsx.
+The older saved attempt is separate from the working solution.
 
 Before coding: clarify assumptions and describe your approach out loud.
 Before finishing: try examples and edge cases; discuss complexity/tradeoffs.

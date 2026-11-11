@@ -1,6 +1,6 @@
 # Product page with independent requests
 
-Runnable unsolved React practice. Implement [`problem.tsx`](problem.tsx); the browser displays the starter and expandable requirements. Reference files remain separate and are not mounted.
+React practice with two browser views: **Solution** runs [`solution.jsx`](solution.jsx), and **Practice** runs your editable [`problem.tsx`](problem.tsx). The requirements appear in both views. Solution opens by default; switching views resets the displayed component’s state.
 
 ```sh
 cd /Users/roger/Sites/frontend-projects/Roblox/05-product-api-requests
