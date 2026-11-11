@@ -1,10 +1,10 @@
-export const columns = [
-  { id: 'col-1', name: 'To do' },
-  { id: 'col-2', name: 'In progress' },
-  { id: 'col-3', name: 'Done' }
+export const COLUMNS = [
+  { id: 'col-1', key: 'todo', name: 'To do' },
+  { id: 'col-2', key: 'inprogress', name: 'In progress' },
+  { id: 'col-3', key: 'done', name: 'Done' }
 ];
-export const SANITIZED_COL_NAMES = columns.map((col) => col.name.toLowerCase().replace(' ', ''));
-export const BOARDS = {
+export const SANITIZED_COL_NAMES = COLUMNS.map((col) => col.name.toLowerCase().replace(' ', ''));
+export const TASKS = {
   todo: [
     { id: 'task-1', title: 'Plan test coverage', description: 'List the key user flows that need automated tests.' },
     {
@@ -41,3 +41,13 @@ export const BOARDS = {
     }
   ]
 };
+
+export function tasksAPI() {
+  return new Promise((resolve) => {
+    console.log('HERE');
+    setTimeout(() => {
+      const data = { columns: COLUMNS, tasks: TASKS };
+      resolve(data);
+    }, 500);
+  });
+}
