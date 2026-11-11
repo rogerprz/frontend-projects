@@ -45,3 +45,8 @@ const singleFileTree = [
   { id: 'single-file', name: 'notes.txt', type: 'file' }
 ];
 // Pass any fixture as the explorer's input while practicing.
+
+// Runnable practice shell — implement the requirements above.
+export default function FileExplorer({ data = FILE_TREE }) {
+  return <section><h2>Explorer starter</h2><p>TODO: Render the tree recursively with folder controls.</p><pre>{JSON.stringify(data, null, 2)}</pre></section>;
+}

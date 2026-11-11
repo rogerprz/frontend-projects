@@ -24,3 +24,8 @@ Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 import React, { useEffect, useState } from 'react';
 
 // TODO: Implement useDebounce and Search here.
+
+// Runnable practice shell — implement the requirements above.
+export default function Search() {
+  return <section><h2>Search starter</h2><p>TODO: Add a controlled input and implement useDebounce.</p></section>;
+}

@@ -11,7 +11,7 @@
 | 06  | React Kanban board                        | [06-problem.jsx](06-react-kanban-board/06-problem.jsx)     |
 | 07  | Country/capital matching game             | [problem.jsx](07-country-capital-game/problem.jsx)   |
 | 08  | React debounced search                    | [problem.jsx](08-react-debounced-search/problem.jsx) |
-| 09  | Expandable file directory                 | [problem.js](09-file-explorer/problem.js)            |
+| 09  | Expandable file directory                 | [problem.js](09-file-explorer/problem.jsx)            |
 | 10  | React product page with multiple requests | [problem.tsx](10-product-api-requests/problem.tsx)   |
 
 ## Vanilla JavaScript UI
@@ -57,7 +57,7 @@ The sections above define study order; folder IDs and completion status are sepa
 
 ## Using these files
 
-People Feed and Employee Search include HTML/CSS reference pages. Exercise 06 includes its own React + Vite environment; the other React exercises need a practice environment. Original source paths and GitHub links remain in comments. Kanban includes a partial earlier attempt, not a finished reference solution.
+People Feed and Employee Search include HTML/CSS reference pages. Exercise 06 includes its own React + Vite environment; exercises 07–10 also include their own React + Vite environments. Original source paths and GitHub links remain in comments. Kanban includes a partial earlier attempt, not a finished reference solution.
 
 [Practice checklist](PROBLEMS.md)
 

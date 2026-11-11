@@ -26,5 +26,16 @@ Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 */
 
 import React, { useEffect, useState } from 'react';
+import { mockAPI } from './src/mockAPI.js';
 
 // TODO: Implement ProductDetailsPage and API mocks here.
+
+// Runnable practice shell — implement the requirements above.
+export default function ProductDetailsPage({ productId = 'A', api = mockAPI }) {
+  return (
+    <section>
+      <h2>Product {productId}</h2>
+      <p>TODO: Call the supplied API and render independent request states.</p>
+    </section>
+  );
+}

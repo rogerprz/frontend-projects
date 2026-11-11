@@ -9,7 +9,7 @@ Current focus: **06. React Kanban board — in progress**. Work in [KanbanBoard.
 - [ ] 06. [React Kanban board](06-react-kanban-board/06-problem.jsx)
 - [ ] 07. [Country/capital matching game](07-country-capital-game/problem.jsx)
 - [ ] 08. [React debounced search](08-react-debounced-search/problem.jsx)
-- [ ] 09. [Expandable file directory](09-file-explorer/problem.js)
+- [ ] 09. [Expandable file directory](09-file-explorer/problem.jsx)
 - [ ] 10. [React product page with multiple requests](10-product-api-requests/problem.tsx)
 
 ## Vanilla JavaScript UI
