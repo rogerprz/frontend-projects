@@ -4,6 +4,7 @@ import { columns, SANITIZED_COL_NAMES, BOARDS } from '../data/kanbanData.js';
 
 export default function KanbanBoard() {
   const [tasks, setTasks] = useState(BOARDS);
+  const [showAddTaskModal, setShowAddTaskModel] = useState(false);
 
   function onButtonHandler(id, currColIdx, nextColIdx) {
     const moveToCol = SANITIZED_COL_NAMES[nextColIdx];
@@ -16,14 +17,36 @@ export default function KanbanBoard() {
       return { ...prev, [currCol]: remainingTasks, [moveToCol]: updatedCol };
     });
   }
+
+  function onDeleteClick(id, currColIdx) {
+    const currCol = SANITIZED_COL_NAMES[currColIdx];
+
+    console.log('DEL:', id, currCol);
+    setTasks((prev) => {
+      const tasks = prev[currCol].filter((task) => task.id !== id);
+      return { ...prev, [currCol]: tasks };
+    });
+  }
+
+  function addTaskClick(currColIdx) {
+    console.log('ADD:', currColIdx);
+    setShowAddTaskModel((prev) => !prev);
+  }
   return (
     <section className="board-container">
-      <Columns columns={columns} tasks={tasks} onButtonHandler={onButtonHandler} />
+      {showAddTaskModal ? <AddTaskModal /> : null}
+      <Columns
+        columns={columns}
+        tasks={tasks}
+        onButtonHandler={onButtonHandler}
+        onDeleteClick={onDeleteClick}
+        addTaskClick={addTaskClick}
+      />
     </section>
   );
 }
 
-function Columns({ columns, tasks, onButtonHandler }) {
+function Columns({ columns, tasks, onButtonHandler, onDeleteClick, addTaskClick }) {
   return (
     <section className="cols-container">
       {columns.map((col, colIdx) => {
@@ -32,7 +55,10 @@ function Columns({ columns, tasks, onButtonHandler }) {
         return (
           <div className="col-container" key={col.id}>
             <h2 className="col-header">
-              {col.name} ({tasks[sanitizedColName].length})
+              {col.name} ({tasks[sanitizedColName].length}){' '}
+              <button className="add-task-button" onClick={() => addTaskClick(colIdx)}>
+                +
+              </button>
             </h2>
             {tasks[sanitizedColName].length == 0
               ? []
@@ -42,6 +68,7 @@ function Columns({ columns, tasks, onButtonHandler }) {
                       key={task.id}
                       task={task}
                       onButtonHandler={onButtonHandler}
+                      onDeleteClick={onDeleteClick}
                       columnName={sanitizedColName}
                       colIdx={colIdx}
                     />
@@ -54,7 +81,7 @@ function Columns({ columns, tasks, onButtonHandler }) {
   );
 }
 
-function Card({ task, onButtonHandler, colIdx }) {
+function Card({ task, onButtonHandler, colIdx, onDeleteClick }) {
   return (
     <div className="card-container">
       <h4>{task.title}</h4>
@@ -66,10 +93,17 @@ function Card({ task, onButtonHandler, colIdx }) {
         <button onClick={() => onButtonHandler(task.id, colIdx, colIdx - 1)} disabled={colIdx === 0}>
           {'< '} Left
         </button>
+        <button id={'delete-button'} onClick={() => onDeleteClick(task.id, colIdx)}>
+          Delete
+        </button>
         <button onClick={() => onButtonHandler(task.id, colIdx, colIdx + 1)} disabled={colIdx === 2}>
           Right{' >'}
         </button>
       </div>
     </div>
   );
+}
+
+function AddTaskModal() {
+  return <section>ADD TASK</section>;
 }

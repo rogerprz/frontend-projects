@@ -49,3 +49,14 @@
   margin-top: auto;
   padding-bottom: 10px;
 }
+
+#delete-button {
+  background-color: red;
+  color: white;
+}
+
+.add-task-button {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
