@@ -1,20 +1,7 @@
-import './App.css';
-import KanbanBoard from './components/KanbanBoard';
-
-function App() {
-  return (
-    <>
-      <section id="center">
-        <KanbanBoard />
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps"></section>
-
-      <div className="ticks"></div>
-    </>
-  );
+import ExercisePage from '../../shared/ExercisePage.jsx';
+import Starter from './components/KanbanBoard.jsx';
+import Solution from './components/BoardReference.jsx';
+import prompt from '../01-problem.jsx?raw';
+export default function App() {
+  return <ExercisePage title="React Kanban board" prompt={prompt} Starter={Starter} Solution={Solution} />;
 }
-
-export default App;

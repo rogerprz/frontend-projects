@@ -39,3 +39,7 @@ The active board fetches and stores the API response. Rendering and interactions
 - [ ] Check empty columns, keyboard controls, and narrow-screen layout.
 
 Practice in 45-minute rounds and explain state ownership, derived state, effect cleanup, and immutable updates. Keep the local index and Notion current-focus section aligned when this workspace changes.
+
+## Interactive practice and solution
+
+Run `npm install` once, then `npm run dev` from this folder. Open the URL printed by Vite. The page shows the exercise requirements and a working solution by default. Select **Practice** to work on your existing starter, then compare behavior using **Solution**.

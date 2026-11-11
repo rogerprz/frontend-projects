@@ -1,6 +1,6 @@
 # Roblox interview practice
 
-16 exercises prioritized for React and vanilla JavaScript practice. Folder numbers match the study order below. Start with the linked prompt in each folder. Exercise 01 has a runnable React + Vite workspace and an active implementation under `src/`.
+17 exercises prioritized for React and vanilla JavaScript practice. Folder numbers match the study order below. Start with the linked prompt in each folder. Exercise 01 has a runnable React + Vite workspace and an active implementation under `src/`.
 
 [Notion study guide](https://app.notion.com/p/40c524cc147181788297fc091cc896ba?pvs=204)
 
@@ -67,3 +67,7 @@ People Feed and Employee Search include HTML/CSS reference pages. Exercise 01 in
 |---|---|---|
 | 15-seat-distance | [849. Maximize Distance to Closest Person](https://leetcode.com/problems/maximize-distance-to-closest-person/) | Medium |
 | 16-rotate-box | [1861. Rotating the Box](https://leetcode.com/problems/rotating-the-box/) | Medium |
+
+## Supplemental React recursion practice
+
+17. [JSON to React](17-json-to-react/README.md) — render nested document data recursively; copied from the saved exercise containing the Atlassian logo.

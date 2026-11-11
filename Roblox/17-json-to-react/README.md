@@ -1,0 +1,26 @@
+# 17. JSON to React
+
+Build a recursive React renderer from a nested JSON document. Start with [problem.jsx](problem.jsx) and [document.json](document.json).
+
+Copied from your existing exercise:
+- [Mock API](nested-components.js): original fixture, returned after a two-second delay.
+- [Earlier reference attempt](NestedComponents.reference.jsx): copied with its import adjusted. It mutates children and wraps text in divs, so treat it as an attempt to review after practicing.
+- The JSON fixture was extracted without changing the original data.
+
+Original sources: [renderer](https://github.com/rogerprz/frontend-projects/blob/main/react-projects/use-context/src/Components/NestedComponents.js) and [fixture](https://github.com/rogerprz/frontend-projects/blob/main/react-projects/use-context/src/data/nested-components.js).
+
+The fixture includes an Atlassian logo; the saved files do not establish official Atlassian interview provenance. This is supplemental Roblox preparation, not a confirmed Roblox question. A standalone Vite dev server is included; see the run instructions below.
+
+## Interactive practice and solution
+
+Run `npm install` once, then `npm run dev` from this folder. Open the URL printed by Vite. The page shows the exercise requirements and a working solution by default. Select **Practice** to work on your existing starter, then compare behavior using **Solution**.
+
+## Run
+
+```sh
+cd /Users/roger/Sites/frontend-projects/Roblox/17-json-to-react
+npm install
+npm run dev
+```
+
+Open the local URL printed by Vite. Edit `problem.jsx`; changes reload automatically. The page shows the requirements and an initially empty document output area until you implement the renderer. Run `npm run build` for a production build.

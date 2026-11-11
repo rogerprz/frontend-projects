@@ -31,3 +31,7 @@ Current focus: **01. React Kanban board — in progress**. Work in [KanbanBoard.
 - [ ] 14. [Roblox experience scheduler](14-experience-scheduler/problem.js)
 - [ ] 15. [849. Maximize Distance to Closest Person](15-seat-distance/problem.js)
 - [ ] 16. [1861. Rotating the Box](16-rotate-box/problem.js)
+
+## Supplemental React recursion practice
+
+- [ ] 17. [JSON to React](17-json-to-react/problem.jsx)

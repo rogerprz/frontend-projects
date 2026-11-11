@@ -29,5 +29,11 @@ import React, { useState } from 'react';
 
 // Runnable practice shell — implement the requirements above.
 export default function CountryCapitalGame({ data = { Japan: 'Tokyo', France: 'Paris', Italy: 'Rome' } }) {
-  return <section><h2>Game starter</h2><p>TODO: Render shuffled buttons and implement matching.</p><pre>{JSON.stringify(data, null, 2)}</pre></section>;
+  return (
+    <section>
+      <h2>Game starter</h2>
+      <p>TODO: Render shuffled buttons and implement matching.</p>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </section>
+  );
 }
