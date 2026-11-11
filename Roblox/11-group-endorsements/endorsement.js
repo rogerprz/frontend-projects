@@ -1,12 +1,12 @@
 /* Original: /Users/roger/Sites/coding-algorithms/LinkedInPractice/jsUI/endorsement.js | https://github.com/rogerprz/coding-algorithms/blob/main/LinkedInPractice/jsUI/endorsement.js */
 // Example provided in prep-book
 const endorsements = [
-  { skill: 'css', user: 'Bill' },
-  { skill: 'javascript', user: 'Chad' },
-  { skill: 'javascript', user: 'Bill' },
-  { skill: 'css', user: 'Sue' },
-  { skill: 'javascript', user: 'Sue' },
-  { skill: 'html', user: 'Sue' }
+  { skill: "css", user: "Bill" },
+  { skill: "javascript", user: "Chad" },
+  { skill: "javascript", user: "Bill" },
+  { skill: "css", user: "Sue" },
+  { skill: "javascript", user: "Sue" },
+  { skill: "html", user: "Sue" },
 ];
 
 function transformEndorsements(endorsements) {

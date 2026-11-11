@@ -1,38 +1,40 @@
 <!-- Original: /Users/roger/Sites/frontend-projects/vanillaHtmlCss/employeeSearch/index.html | https://github.com/rogerprz/frontend-projects/blob/main/vanillaHtmlCss/employeeSearch/index.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+  <body>
+    <script src="./employeeSearch.js"></script>
 
-<body>
-  <script src="./employeeSearch.js"></script>
-
-  <link rel="stylesheet" href="./employeeSearch.css">
-  <div id="app">
-    <h1>Employee directory</h1>
-    <div>
-      <input type="text" id="search-input" placeholder="Search employees...">
-      <button id="search-btn">Search</button>
-      <button id="reset-btn">Reset</button>
+    <link rel="stylesheet" href="./employeeSearch.css" />
+    <div id="app">
+      <h1>Employee directory</h1>
+      <div>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search employees..."
+        />
+        <button id="search-btn">Search</button>
+        <button id="reset-btn">Reset</button>
+      </div>
+      <table id="employee-table">
+        <thead>
+          <tr>
+            <th data-key="id">ID</th>
+            <th data-key="name">Name</th>
+            <th data-key="department">Department</th>
+            <th data-key="age">Age</th>
+          </tr>
+        </thead>
+        <tbody id="employee-table-body">
+          <!-- Employee rows will be populated here -->
+        </tbody>
+      </table>
     </div>
-    <table id="employee-table">
-      <thead>
-        <tr>
-          <th data-key="id">ID</th>
-          <th data-key="name">Name</th>
-          <th data-key="department">Department</th>
-          <th data-key="age">Age</th>
-        </tr>
-      </thead>
-      <tbody id="employee-table-body">
-        <!-- Employee rows will be populated here -->
-      </tbody>
-    </table>
-  </div>
-</body>
-
+  </body>
 </html>

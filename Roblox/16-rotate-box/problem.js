@@ -40,14 +40,14 @@ const boxGrid2 = [["#",".","*","."],
                   [".","."]]
 */
 function rotateTheBox(boxGrid) {
-  const WALL = '*';
-  const STONE = '#';
+  const WALL = "*";
+  const STONE = "#";
 
   let rows = boxGrid.length;
   let cols = boxGrid[0].length;
 
-  const res = new Array(cols).fill(0).map(() => new Array(rows).fill('.'));
-  console.log('R:', res);
+  const res = new Array(cols).fill(0).map(() => new Array(rows).fill("."));
+  console.log("R:", res);
   for (let row = 0; row < rows; row++) {
     let endRowIdx = cols - 1;
 
@@ -69,12 +69,12 @@ function rotateTheBox(boxGrid) {
 }
 
 // INPUT EXAMPLES — ready to use; calls remain commented until you implement the problem.
-const boxExample = [['#', '.', '#']]; // Expected: [['.'], ['#'], ['#']]
-const boxWithObstacle = [['#', '*', '.']]; // Expected: [['#'], ['*'], ['.']]
-const boxEmpty = [['.', '.']]; // Expected: [['.'], ['.']]
+const boxExample = [["#", ".", "#"]]; // Expected: [['.'], ['#'], ['#']]
+const boxWithObstacle = [["#", "*", "."]]; // Expected: [['#'], ['*'], ['.']]
+const boxEmpty = [[".", "."]]; // Expected: [['.'], ['.']]
 const boxRectangular = [
-  ['#', '.', '*', '.'],
-  ['#', '#', '*', '.']
+  ["#", ".", "*", "."],
+  ["#", "#", "*", "."],
 ]; // Expected: [['#', '.'], ['#', '#'], ['*', '*'], ['.', '.']]
 
 rotateTheBox(boxExample).map((row) => console.log(row));

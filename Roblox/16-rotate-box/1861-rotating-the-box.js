@@ -14,14 +14,14 @@ LC: https://leetcode.com/problems/rotating-the-box/description/
  * @return {character[][]}
  */
 var rotateTheBox = function (boxGrid) {
-  const STONE = '#';
-  const WALL = '*';
+  const STONE = "#";
+  const WALL = "*";
   const rows = boxGrid.length;
   const cols = boxGrid[0].length;
 
   // A 2×4 box becomes 4×2 after rotation, so the result needs cols rows.
   // Separate arrays prevent changing one result row from changing another.
-  const result = Array.from({ length: cols }, () => Array(rows).fill('.'));
+  const result = Array.from({ length: cols }, () => Array(rows).fill("."));
 
   // Process each original row independently because rotation turns it into one column.
   // Stones fall within that column, so they cannot interact with other original rows.

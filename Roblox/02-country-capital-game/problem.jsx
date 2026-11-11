@@ -26,12 +26,14 @@ Before coding: clarify assumptions and describe your approach out loud.
 Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 */
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 // TODO: Implement CountryCapitalGame here.
 
 // Runnable practice shell — implement the requirements above.
-export default function CountryCapitalGame({ data = { Japan: 'Tokyo', France: 'Paris', Italy: 'Rome' } }) {
+export default function CountryCapitalGame({
+  data = { Japan: "Tokyo", France: "Paris", Italy: "Rome" },
+}) {
   return (
     <section>
       <h2>Game starter</h2>

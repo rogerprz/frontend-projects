@@ -3,7 +3,7 @@
 Array.prototype.myReduce = function (callbackFn, initialValue) {
   // Check if array is empty and no initialValue is provided
   if (this.length === 0 && arguments.length < 2) {
-    throw new TypeError('Reduce of empty array with no initial value');
+    throw new TypeError("Reduce of empty array with no initial value");
   }
 
   let index = 0;
@@ -21,7 +21,7 @@ Array.prototype.myReduce = function (callbackFn, initialValue) {
 
     // If all elements are empty and no initialValue, throw error
     if (index >= this.length) {
-      throw new TypeError('Reduce of empty array with no initial value');
+      throw new TypeError("Reduce of empty array with no initial value");
     }
 
     accumulator = this[index++];

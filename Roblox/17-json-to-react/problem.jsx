@@ -31,10 +31,10 @@ Solution runs solution.jsx, which implements the core synchronous renderer.
 NestedComponents.reference.jsx is a separate, older attempt with known issues.
 The asynchronous loading follow-up is not part of the core solution.
 */
-import React from 'react';
-import document from './document.json';
+import React from "react";
+import document from "./document.json";
 
 export default function DocumentRenderer({ nodes = document }) {
-  // TODO: Recursively convert document nodes into React elements.
+  console.log("D:", document);
   return null;
 }

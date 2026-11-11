@@ -6,39 +6,39 @@
 
 ## React UI and async state
 
-| ID | Exercise | Starter |
-| --- | --- | --- |
-| 01  | React Kanban board                        | [01-problem.jsx](01-react-kanban-board/01-problem.jsx)     |
-| 02  | Country/capital matching game             | [problem.jsx](02-country-capital-game/problem.jsx)   |
-| 03  | React debounced search                    | [problem.jsx](03-react-debounced-search/problem.jsx) |
+| ID  | Exercise                                  | Starter                                                |
+| --- | ----------------------------------------- | ------------------------------------------------------ |
+| 01  | React Kanban board                        | [01-problem.jsx](01-react-kanban-board/01-problem.jsx) |
+| 02  | Country/capital matching game             | [problem.jsx](02-country-capital-game/problem.jsx)     |
+| 03  | React debounced search                    | [problem.jsx](03-react-debounced-search/problem.jsx)   |
 | 04  | Expandable file directory                 | [problem.jsx](04-file-explorer/problem.jsx)            |
-| 05  | React product page with multiple requests | [problem.tsx](05-product-api-requests/problem.tsx)   |
+| 05  | React product page with multiple requests | [problem.tsx](05-product-api-requests/problem.tsx)     |
 
 ## Vanilla JavaScript UI
 
-| ID | Exercise | Starter |
-| --- | --- | --- |
-| 06  | Employee search and sorting               | [problem.js](06-employee-search/problem.js)          |
-| 07  | People feed                               | [problem.js](07-people-feed/problem.js)              |
+| ID  | Exercise                    | Starter                                     |
+| --- | --------------------------- | ------------------------------------------- |
+| 06  | Employee search and sorting | [problem.js](06-employee-search/problem.js) |
+| 07  | People feed                 | [problem.js](07-people-feed/problem.js)     |
 
 ## JavaScript utilities and data transformations
 
-| ID | Exercise | Starter |
-| --- | --- | --- |
-| 08  | Vanilla JavaScript debounce               | [problem.js](08-debounce/problem.js)                 |
-| 09  | Fetch batching / concurrency              | [problem.js](09-request-concurrency/problem.js)      |
-| 10  | Implement reduce                          | [problem.js](10-array-reduce/problem.js)             |
-| 11  | Group endorsements                        | [problem.js](11-group-endorsements/problem.js)       |
-| 12  | Aggregate post tags                       | [problem.js](12-aggregate-tags/problem.js)           |
-| 13  | Group activity by date and user           | [problem.js](13-group-activity/problem.js)           |
+| ID  | Exercise                        | Starter                                         |
+| --- | ------------------------------- | ----------------------------------------------- |
+| 08  | Vanilla JavaScript debounce     | [problem.js](08-debounce/problem.js)            |
+| 09  | Fetch batching / concurrency    | [problem.js](09-request-concurrency/problem.js) |
+| 10  | Implement reduce                | [problem.js](10-array-reduce/problem.js)        |
+| 11  | Group endorsements              | [problem.js](11-group-endorsements/problem.js)  |
+| 12  | Aggregate post tags             | [problem.js](12-aggregate-tags/problem.js)      |
+| 13  | Group activity by date and user | [problem.js](13-group-activity/problem.js)      |
 
 ## Additional algorithm practice
 
-| ID | Exercise | Starter |
-| --- | --- | --- |
-| 14  | Roblox experience scheduler               | [problem.js](14-experience-scheduler/problem.js)     |
-| 15  | 849. Maximize Distance to Closest Person  | [problem.js](15-seat-distance/problem.js)            |
-| 16  | 1861. Rotating the Box                    | [problem.js](16-rotate-box/problem.js)               |
+| ID  | Exercise                                 | Starter                                          |
+| --- | ---------------------------------------- | ------------------------------------------------ |
+| 14  | Roblox experience scheduler              | [problem.js](14-experience-scheduler/problem.js) |
+| 15  | 849. Maximize Distance to Closest Person | [problem.js](15-seat-distance/problem.js)        |
+| 16  | 1861. Rotating the Box                   | [problem.js](16-rotate-box/problem.js)           |
 
 ## Current practice — 01. React Kanban board
 
@@ -63,10 +63,10 @@ People Feed and Employee Search include HTML/CSS reference pages. React exercise
 
 ## Official LeetCode links
 
-| Folder | Problem | Difficulty |
-|---|---|---|
-| 15-seat-distance | [849. Maximize Distance to Closest Person](https://leetcode.com/problems/maximize-distance-to-closest-person/) | Medium |
-| 16-rotate-box | [1861. Rotating the Box](https://leetcode.com/problems/rotating-the-box/) | Medium |
+| Folder           | Problem                                                                                                        | Difficulty |
+| ---------------- | -------------------------------------------------------------------------------------------------------------- | ---------- |
+| 15-seat-distance | [849. Maximize Distance to Closest Person](https://leetcode.com/problems/maximize-distance-to-closest-person/) | Medium     |
+| 16-rotate-box    | [1861. Rotating the Box](https://leetcode.com/problems/rotating-the-box/)                                      | Medium     |
 
 ## Supplemental React recursion practice
 

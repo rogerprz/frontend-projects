@@ -6,21 +6,21 @@ Current focus: **01. React Kanban board — in progress**. Work in [KanbanBoard.
 
 ## React UI and async state
 
-- [ ] 01. [React Kanban board](01-react-kanban-board/01-problem.jsx)
-- [ ] 02. [Country/capital matching game](02-country-capital-game/problem.jsx)
-- [ ] 03. [React debounced search](03-react-debounced-search/problem.jsx)
-- [ ] 04. [Expandable file directory](04-file-explorer/problem.jsx)
-- [ ] 05. [React product page with multiple requests](05-product-api-requests/problem.tsx)
+- [ ] 1.  [React Kanban board](01-react-kanban-board/01-problem.jsx)
+- [ ] 2.  [Country/capital matching game](02-country-capital-game/problem.jsx)
+- [ ] 3.  [React debounced search](03-react-debounced-search/problem.jsx)
+- [ ] 4.  [Expandable file directory](04-file-explorer/problem.jsx)
+- [ ] 5.  [React product page with multiple requests](05-product-api-requests/problem.tsx)
 
 ## Vanilla JavaScript UI
 
-- [ ] 06. [Employee search and sorting](06-employee-search/problem.js)
-- [ ] 07. [People feed](07-people-feed/problem.js)
+- [ ] 6.  [Employee search and sorting](06-employee-search/problem.js)
+- [ ] 7.  [People feed](07-people-feed/problem.js)
 
 ## JavaScript utilities and data transformations
 
-- [ ] 08. [Vanilla JavaScript debounce](08-debounce/problem.js)
-- [ ] 09. [Fetch batching / concurrency](09-request-concurrency/problem.js)
+- [ ] 8.  [Vanilla JavaScript debounce](08-debounce/problem.js)
+- [ ] 9.  [Fetch batching / concurrency](09-request-concurrency/problem.js)
 - [ ] 10. [Implement reduce](10-array-reduce/problem.js)
 - [ ] 11. [Group endorsements](11-group-endorsements/problem.js)
 - [ ] 12. [Aggregate post tags](12-aggregate-tags/problem.js)

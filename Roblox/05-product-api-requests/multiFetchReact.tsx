@@ -1,5 +1,5 @@
 /* Original: /Users/roger/Sites/coding-algorithms/practice/multiFetchReact.tsx | https://github.com/rogerprz/coding-algorithms/blob/main/practice/multiFetchReact.tsx */
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from "react";
 
 const ProductDetailsPage = ({ productId }) => {
   // State for each data type
@@ -43,7 +43,7 @@ const ProductDetailsPage = ({ productId }) => {
           }
         } catch (error) {
           // Don't retry or set error state if aborted
-          if (error.name === 'AbortError') return;
+          if (error.name === "AbortError") return;
 
           // Retry logic
           if (retryCount.current < 3) {
@@ -52,10 +52,18 @@ const ProductDetailsPage = ({ productId }) => {
 
             // Wait 1 second before retrying
             setTimeout(() => {
-              fetchWithRetry(fetchFn, setData, setLoading, setError, retryCount);
+              fetchWithRetry(
+                fetchFn,
+                setData,
+                setLoading,
+                setError,
+                retryCount,
+              );
             }, 1000);
           } else {
-            setError(`Failed after ${retryCount.current} retries: ${error.message}`);
+            setError(
+              `Failed after ${retryCount.current} retries: ${error.message}`,
+            );
             setLoading(false);
           }
         }
@@ -69,26 +77,32 @@ const ProductDetailsPage = ({ productId }) => {
         setLoading(false);
       }
     },
-    [productId]
+    [productId],
   );
 
   // Mock API fetch functions that accept signal for abort functionality
   const fetchProductInfo = useCallback((id, signal) => {
-    return fetch(`https://api.example.com/products/${id}`, { signal }).then((response) => {
-      if (!response.ok) throw new Error(`HTTP error ${response.status}`);
-      return response.json();
-    });
+    return fetch(`https://api.example.com/products/${id}`, { signal }).then(
+      (response) => {
+        if (!response.ok) throw new Error(`HTTP error ${response.status}`);
+        return response.json();
+      },
+    );
   }, []);
 
   const fetchProductReviews = useCallback((id, signal) => {
-    return fetch(`https://api.example.com/products/${id}/reviews`, { signal }).then((response) => {
+    return fetch(`https://api.example.com/products/${id}/reviews`, {
+      signal,
+    }).then((response) => {
       if (!response.ok) throw new Error(`HTTP error ${response.status}`);
       return response.json();
     });
   }, []);
 
   const fetchRelatedProducts = useCallback((id, signal) => {
-    return fetch(`https://api.example.com/products/${id}/related`, { signal }).then((response) => {
+    return fetch(`https://api.example.com/products/${id}/related`, {
+      signal,
+    }).then((response) => {
       if (!response.ok) throw new Error(`HTTP error ${response.status}`);
       return response.json();
     });
@@ -101,14 +115,20 @@ const ProductDetailsPage = ({ productId }) => {
     relatedRetries.current = 0;
 
     // Start the three independent fetch operations
-    const cleanupInfo = fetchWithRetry(fetchProductInfo, setProductInfo, setLoadingInfo, setInfoError, infoRetries);
+    const cleanupInfo = fetchWithRetry(
+      fetchProductInfo,
+      setProductInfo,
+      setLoadingInfo,
+      setInfoError,
+      infoRetries,
+    );
 
     const cleanupReviews = fetchWithRetry(
       fetchProductReviews,
       setProductReviews,
       setLoadingReviews,
       setReviewsError,
-      reviewsRetries
+      reviewsRetries,
     );
 
     const cleanupRelated = fetchWithRetry(
@@ -116,7 +136,7 @@ const ProductDetailsPage = ({ productId }) => {
       setRelatedProducts,
       setLoadingRelated,
       setRelatedError,
-      relatedRetries
+      relatedRetries,
     );
 
     // Return cleanup function to prevent memory leaks
@@ -125,7 +145,13 @@ const ProductDetailsPage = ({ productId }) => {
       cleanupReviews && cleanupReviews();
       cleanupRelated && cleanupRelated();
     };
-  }, [productId, fetchWithRetry, fetchProductInfo, fetchProductReviews, fetchRelatedProducts]);
+  }, [
+    productId,
+    fetchWithRetry,
+    fetchProductInfo,
+    fetchProductReviews,
+    fetchRelatedProducts,
+  ]);
 
   return (
     <div className="product-details-page">

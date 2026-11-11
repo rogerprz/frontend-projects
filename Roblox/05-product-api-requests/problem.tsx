@@ -31,13 +31,13 @@ Before coding: clarify assumptions and describe your approach out loud.
 Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 */
 
-import React, { useEffect, useState } from 'react';
-import { mockAPI } from './src/mockAPI.js';
+import React, { useEffect, useState } from "react";
+import { mockAPI } from "./src/mockAPI.js";
 
 // TODO: Implement ProductDetailsPage using the supplied API mock.
 
 // Runnable practice shell — implement the requirements above.
-export default function ProductDetailsPage({ productId = 'A', api = mockAPI }) {
+export default function ProductDetailsPage({ productId = "A", api = mockAPI }) {
   return (
     <section>
       <h2>Product {productId}</h2>

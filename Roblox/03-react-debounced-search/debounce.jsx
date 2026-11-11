@@ -1,5 +1,5 @@
 /* Original: /Users/roger/Sites/coding-algorithms/practice/debounce.jsx | https://github.com/rogerprz/coding-algorithms/blob/main/practice/debounce.jsx */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const useDebounce = (value, delay) => {
   const [debounceValue, setDebounceValue] = useState(value);
@@ -16,7 +16,7 @@ const useDebounce = (value, delay) => {
 };
 
 function SearchComponent() {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
 
   const [debounceQuery, setDebounceQuery] = useState(query);
 
@@ -30,13 +30,17 @@ function SearchComponent() {
 
   useEffect(() => {
     if (debounceQuery) {
-      console.log('API call with query:', debounceQuery);
+      console.log("API call with query:", debounceQuery);
     }
   }, [debounceQuery]);
 
   return (
     <div>
-      <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+      />
       <p>
         Debounced Query:
         {debounceQuery}

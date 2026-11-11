@@ -26,16 +26,24 @@ Before coding: clarify assumptions and describe your approach out loud.
 Before finishing: try examples and edge cases; discuss complexity/tradeoffs.
 */
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const FILE_TREE = [
-  { id: 'src', name: 'src', type: 'folder', children: [
-    { id: 'components', name: 'components', type: 'folder', children: [
-      { id: 'app', name: 'App.jsx', type: 'file' }
-    ] },
-    { id: 'index', name: 'index.js', type: 'file' }
-  ] },
-  { id: 'readme', name: 'README.md', type: 'file' }
+  {
+    id: "src",
+    name: "src",
+    type: "folder",
+    children: [
+      {
+        id: "components",
+        name: "components",
+        type: "folder",
+        children: [{ id: "app", name: "App.jsx", type: "file" }],
+      },
+      { id: "index", name: "index.js", type: "file" },
+    ],
+  },
+  { id: "readme", name: "README.md", type: "file" },
 ];
 // TODO: Implement the explorer here.
 
@@ -43,14 +51,18 @@ const FILE_TREE = [
 // FILE_TREE above is the primary input fixture.
 const emptyFileTree = []; // Expected UI: No files
 const emptyFolderTree = [
-  { id: 'empty', name: 'Empty folder', type: 'folder', children: [] }
+  { id: "empty", name: "Empty folder", type: "folder", children: [] },
 ];
-const singleFileTree = [
-  { id: 'single-file', name: 'notes.txt', type: 'file' }
-];
+const singleFileTree = [{ id: "single-file", name: "notes.txt", type: "file" }];
 // Pass any fixture as the explorer's input while practicing.
 
 // Runnable practice shell — implement the requirements above.
 export default function FileExplorer({ data = FILE_TREE }) {
-  return <section><h2>Explorer starter</h2><p>TODO: Render the tree recursively with folder controls.</p><pre>{JSON.stringify(data, null, 2)}</pre></section>;
+  return (
+    <section>
+      <h2>Explorer starter</h2>
+      <p>TODO: Render the tree recursively with folder controls.</p>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </section>
+  );
 }

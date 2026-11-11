@@ -3,6 +3,7 @@
 Build a recursive React renderer from a nested JSON document. Start with [problem.jsx](problem.jsx) and [document.json](document.json).
 
 Copied from your existing exercise:
+
 - [Mock API](nested-components.js): original fixture, returned after a two-second delay.
 - [Earlier reference attempt](NestedComponents.reference.jsx): copied with its import adjusted. It mutates children and wraps text in divs, so treat it as an attempt to review after practicing.
 - The JSON fixture is the input for both the starter and the working solution. Its heading text and logo are sample document content, not instructions for the exercise.

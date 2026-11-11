@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import './KanbanBoard.css';
-import { tasksAPI } from '../data/kanbanData.js';
+import React, { useState, useEffect } from "react";
+import "./KanbanBoard.css";
+import { tasksAPI } from "../data/kanbanData.js";
 
 export default function KanbanBoard() {
   const [data, setData] = useState({});
   React.useEffect(() => {
-    console.log('EFFECT');
+    console.log("EFFECT");
 
     tasksAPI().then((data) => {
-      console.log('D:', data);
+      console.log("D:", data);
       setData(data);
     });
   }, []);

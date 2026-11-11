@@ -1,5 +1,5 @@
 /* Original: /Users/roger/Sites/coding-algorithms/asyncCallbacksPromises/debounce.js | https://github.com/rogerprz/coding-algorithms/blob/main/asyncCallbacksPromises/debounce.js */
-const sayHello = (x) => console.log('My name is', this.name);
+const sayHello = (x) => console.log("My name is", this.name);
 
 function debounce(func, wait) {
   let timeout = null;
@@ -9,21 +9,21 @@ function debounce(func, wait) {
     clearTimeout(timeout);
     // console.log('ARGS:', ...args);
     timeout = setTimeout(() => {
-      console.log('In timeout');
+      console.log("In timeout");
       return func.apply(this, args);
     }, wait);
   };
 }
 
 const debouncedSayHello = debounce(sayHello, 2500);
-debouncedSayHello('Hello');
-debouncedSayHello('Second');
+debouncedSayHello("Hello");
+debouncedSayHello("Second");
 debouncedSayHello(3);
 setTimeout(() => debouncedSayHello(4), 200);
 
 const amy = {
-  name: 'amy',
-  speak: debounce(sayHello)
+  name: "amy",
+  speak: debounce(sayHello),
 };
 
 amy.speak();

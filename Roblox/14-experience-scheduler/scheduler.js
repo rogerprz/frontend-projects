@@ -49,7 +49,7 @@
 // print(can_generate_schedule_with_constraint(example_preferences))
 // # Other test cases...
 
-console.log('Hello world');
+console.log("Hello world");
 
 // { a: 5, b: 1, c: 1 }
 // 5, 1, 1, -> a ,b , a, c, a, a,  a
@@ -58,19 +58,19 @@ console.log('Hello world');
 // if the max - 1 = sum of the rest
 const badExample = {
   12344: 10,
-  29308: 1
+  29308: 1,
 };
 
 const edgeCase = {
   a: 5,
-  b: 4
+  b: 4,
 };
 const canonicalExample = {
   12344: 3,
   29308: 2,
   99831: 4,
   57782: 1,
-  27007: 1
+  27007: 1,
 };
 // part 1: fal
 function isScheduleValid(items) {
