@@ -1,5 +1,5 @@
-import React, { useState, useEffect, createElement } from "react";
-import data from "./nested-components";
+import React, { useState, useEffect, createElement } from 'react';
+import data from './nested-components';
 
 export const NestedComponents = () => {
   const [content, setContent] = useState([]);
@@ -15,7 +15,7 @@ export const NestedComponents = () => {
         const result = await getData();
         if (isMounted) setContent(result);
       } catch (err) {
-        console.log("ERROR:", err);
+        console.log('ERROR:', err);
       }
     };
     fetchData();
@@ -37,22 +37,37 @@ export const NestedComponents = () => {
 };
 
 function CreateElement({ item }) {
-  const { type, attrs, children } = item;
+  console.log(item);
+  const { type, children, attrs, value } = item;
 
-  if (children && children.length > 0) {
-    item.children = children.map((child, index) => {
-      return <CreateElement key={index} item={child} />;
+  let content = [];
+  if (children && children?.length > 0) {
+    content = children.map((child) => {
+      return <CreateElement key={child.id} item={child} />;
     });
   }
-  if (type === "heading") {
-    return React.createElement(`h${attrs.level}`, null, item.children);
-  } else if (type === "text") {
-    return <div>{item.value}</div>;
-  } else if (type === "image") {
+  if (type === 'heading') {
+    return React.createElement(`h${attrs.level}`, null, content);
+  } else if (type === 'text') {
+    return item.value;
+  } else if (type === 'image') {
     return <img {...attrs} />;
-  } else if (type === "unordered-list") {
-    return React.createElement("ul", null, item.children);
-  } else if (type === "list-item") {
-    return React.createElement("li", null, item.children);
+  } else if (type === 'unordered-list') {
+    return React.createElement('ul', null, content);
+  } else if (type === 'list-item') {
+    return React.createElement('li', null, content);
   }
+  return item.value ?? 'empty';
+}
+function Header({ item }) {
+  return React.createElement(`h${item.attrs.level}`, null, item.children);
+}
+
+function UnorderedList({ item }) {
+  // console.log('ULL:', item);
+  return React.createElement('ul', null, item.children);
+}
+
+function ListItem({ item }) {
+  return React.createElement('li', null, item.children);
 }

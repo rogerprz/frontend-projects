@@ -14,7 +14,7 @@ The fixture includes an Atlassian logo; the saved files do not establish officia
 
 ## Interactive practice and solution
 
-Run `npm install` once, then `npm run dev` from this folder. Open the URL printed by Vite. The page shows the exercise requirements and a working solution by default. Select **Practice** to work on your existing starter, then compare behavior using **Solution**.
+Run `npm install` once, then `npm run dev` from this folder. Open the URL printed by Vite. The page shows the exercise requirements and a working solution on first visit, then remembers your selected Practice or Solution view across refreshes. Select **Practice** to work on your existing starter, then compare behavior using **Solution**.
 
 ## Run
 
@@ -24,4 +24,4 @@ npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite. Edit `problem.jsx`; changes reload automatically. Solution opens by default and renders `document.json` using `solution.jsx`. Select Practice to run your `problem.jsx`; its starter returns `null`, so that view has no document content until you implement it. Switching views resets component state. Run `npm run build` for a production build.
+Open the local URL printed by Vite. Edit `problem.jsx`; changes reload automatically. On first visit, Solution opens and renders `document.json` using `solution.jsx`. Select Practice to run your `problem.jsx`; its starter returns `null`, so that view has no document content until you implement it. Switching views resets component state. Run `npm run build` for a production build.

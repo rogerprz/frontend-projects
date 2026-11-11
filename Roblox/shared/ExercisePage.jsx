@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./exercise.css";
 
 export default function ExercisePage({
@@ -10,7 +10,22 @@ export default function ExercisePage({
   practiceFile = "problem.jsx",
   solutionFile = "solution.jsx",
 }) {
-  const [mode, setMode] = useState("solution");
+  const storageKey = `roblox:exercise-view:${title}`;
+  const [mode, setMode] = useState(() => {
+    try {
+      const savedMode = localStorage.getItem(storageKey);
+      return savedMode === "starter" ? "starter" : "solution";
+    } catch {
+      return "solution";
+    }
+  });
+  useEffect(() => {
+    try {
+      localStorage.setItem(storageKey, mode);
+    } catch {
+      // Keep the view switch usable when browser storage is unavailable.
+    }
+  }, [mode, storageKey]);
   const [productId, setProductId] = useState("A");
   const Component = mode === "solution" ? Solution : Starter;
   const requirements = prompt.match(/\/\*([\s\S]*?)\*\//)?.[1] ?? prompt;
@@ -39,7 +54,8 @@ export default function ExercisePage({
       </p>
       <p>
         Switching views resets the displayed exercise’s state. Editing a file
-        updates its corresponding view through Vite.
+        updates its corresponding view through Vite. Your selected view is
+        remembered for this exercise when you refresh.
       </p>
       <details open>
         <summary>Exercise requirements</summary>
