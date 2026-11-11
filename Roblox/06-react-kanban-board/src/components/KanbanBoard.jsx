@@ -1,47 +1,20 @@
 import './KanbanBoard.css';
 import React, { useState } from 'react';
-
-const COLUMN_NAMES = [
-  { id: 'col-1', name: 'To do' },
-  { id: 'col-2', name: 'In progress' },
-  { id: 'col-3', name: 'Done' }
-];
-const BOARDS = {
-  todo: [
-    { id: 'task-1', title: 'Write tests', description: 'This is a card description' },
-    { id: 'task-2', title: 'Build search', description: 'We have to search before we build' },
-    { id: 'task-3', title: 'Update docs', description: 'update the docs or else' }
-  ],
-  inprogress: [
-    {
-      id: 'task-11',
-      title: 'Write tests',
-      description: 'Let write some test now. This is a very long sentence for some reason.'
-    },
-    {
-      id: 'task-12',
-      title: 'Build search',
-      description: 'We will be building multiple search features here. That is a good thing'
-    },
-    { id: 'task-13', title: 'Update docs', description: 'todo' }
-  ],
-  done: [
-    { id: 'task-21', title: 'Write tests', description: 'todo' },
-    {
-      id: 'task-22',
-      title: 'Build search',
-      description: 'We will be building multiple search features here. That is a good thing'
-    },
-    { id: 'task-23', title: 'Update docs', description: 'todo' }
-  ]
-};
+import { columns, SANITIZED_COL_NAMES, BOARDS } from '../data/kanbanData.js';
 
 export default function KanbanBoard() {
-  const [columns, setColumns] = useState(COLUMN_NAMES);
   const [tasks, setTasks] = useState(BOARDS);
 
-  function onButtonHandler(id, direction) {
-    console.log('CLICK', id, direction);
+  function onButtonHandler(id, currColIdx, nextColIdx) {
+    const moveToCol = SANITIZED_COL_NAMES[nextColIdx];
+    const currCol = SANITIZED_COL_NAMES[currColIdx];
+    setTasks((prev) => {
+      const task = prev[currCol].filter((t) => t.id === id);
+      const remainingTasks = prev[currCol].filter((t) => t.id !== id);
+      const updatedCol = [...prev[moveToCol], ...task];
+
+      return { ...prev, [currCol]: remainingTasks, [moveToCol]: updatedCol };
+    });
   }
   return (
     <section className="board-container">
@@ -53,17 +26,25 @@ export default function KanbanBoard() {
 function Columns({ columns, tasks, onButtonHandler }) {
   return (
     <section className="cols-container">
-      {columns.map((col) => {
+      {columns.map((col, colIdx) => {
         const sanitizedColName = col.name.toLowerCase().replace(' ', '');
 
         return (
           <div className="col-container" key={col.id}>
-            <h2 className="col-header">{col.name}</h2>
+            <h2 className="col-header">
+              {col.name} ({tasks[sanitizedColName].length})
+            </h2>
             {tasks[sanitizedColName].length == 0
               ? []
               : tasks[sanitizedColName].map((task) => {
                   return (
-                    <Card key={task.id} task={task} onButtonHandler={onButtonHandler} columnName={sanitizedColName} />
+                    <Card
+                      key={task.id}
+                      task={task}
+                      onButtonHandler={onButtonHandler}
+                      columnName={sanitizedColName}
+                      colIdx={colIdx}
+                    />
                   );
                 })}
           </div>
@@ -73,7 +54,7 @@ function Columns({ columns, tasks, onButtonHandler }) {
   );
 }
 
-function Card({ task, onButtonHandler, columnName }) {
+function Card({ task, onButtonHandler, colIdx }) {
   return (
     <div className="card-container">
       <h4>{task.title}</h4>
@@ -82,11 +63,11 @@ function Card({ task, onButtonHandler, columnName }) {
         <div className="card-description">{task.description}</div>
       </div>
       <div className="card-nav-container">
-        <button onClick={() => onButtonHandler(task.id, 'left')} disabled={columnName === 'todo'}>
-          Left
+        <button onClick={() => onButtonHandler(task.id, colIdx, colIdx - 1)} disabled={colIdx === 0}>
+          {'< '} Left
         </button>
-        <button onClick={() => onButtonHandler(task.id, 'right')} disabled={columnName === 'done'}>
-          Right
+        <button onClick={() => onButtonHandler(task.id, colIdx, colIdx + 1)} disabled={colIdx === 2}>
+          Right{' >'}
         </button>
       </div>
     </div>
