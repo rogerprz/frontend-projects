@@ -39,14 +39,18 @@ const BOARDS = {
 export default function KanbanBoard() {
   const [columns, setColumns] = useState(COLUMN_NAMES);
   const [tasks, setTasks] = useState(BOARDS);
+
+  function onButtonHandler(id, direction) {
+    console.log('CLICK', id, direction);
+  }
   return (
     <section className="board-container">
-      <Columns columns={columns} tasks={tasks} />
+      <Columns columns={columns} tasks={tasks} onButtonHandler={onButtonHandler} />
     </section>
   );
 }
 
-function Columns({ columns, tasks }) {
+function Columns({ columns, tasks, onButtonHandler }) {
   return (
     <section className="cols-container">
       {columns.map((col) => {
@@ -58,7 +62,9 @@ function Columns({ columns, tasks }) {
             {tasks[sanitizedColName].length == 0
               ? []
               : tasks[sanitizedColName].map((task) => {
-                  return <Card key={task.id} task={task} />;
+                  return (
+                    <Card key={task.id} task={task} onButtonHandler={onButtonHandler} columnName={sanitizedColName} />
+                  );
                 })}
           </div>
         );
@@ -67,7 +73,7 @@ function Columns({ columns, tasks }) {
   );
 }
 
-function Card({ task }) {
+function Card({ task, onButtonHandler, columnName }) {
   return (
     <div className="card-container">
       <h4>{task.title}</h4>
@@ -76,8 +82,12 @@ function Card({ task }) {
         <div className="card-description">{task.description}</div>
       </div>
       <div className="card-nav-container">
-        <button>Left</button>
-        <button>Right</button>
+        <button onClick={() => onButtonHandler(task.id, 'left')} disabled={columnName === 'todo'}>
+          Left
+        </button>
+        <button onClick={() => onButtonHandler(task.id, 'right')} disabled={columnName === 'done'}>
+          Right
+        </button>
       </div>
     </div>
   );
