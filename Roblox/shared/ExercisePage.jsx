@@ -11,6 +11,24 @@ export default function ExercisePage({
   solutionFile = "solution.jsx",
 }) {
   const storageKey = `roblox:exercise-view:${title}`;
+  const requirementsStorageKey = `roblox:exercise-requirements:${title}`;
+  const [requirementsOpen, setRequirementsOpen] = useState(() => {
+    try {
+      return localStorage.getItem(requirementsStorageKey) !== "closed";
+    } catch {
+      return true;
+    }
+  });
+  useEffect(() => {
+    try {
+      localStorage.setItem(
+        requirementsStorageKey,
+        requirementsOpen ? "open" : "closed",
+      );
+    } catch {
+      // Keep the requirements toggle usable when browser storage is unavailable.
+    }
+  }, [requirementsOpen, requirementsStorageKey]);
   const [mode, setMode] = useState(() => {
     try {
       const savedMode = localStorage.getItem(storageKey);
@@ -57,7 +75,10 @@ export default function ExercisePage({
         updates its corresponding view through Vite. Your selected view is
         remembered for this exercise when you refresh.
       </p>
-      <details open>
+      <details
+        open={requirementsOpen}
+        onToggle={(event) => setRequirementsOpen(event.currentTarget.open)}
+      >
         <summary>Exercise requirements</summary>
         <pre>{requirements}</pre>
       </details>
