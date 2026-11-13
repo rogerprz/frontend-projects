@@ -1,0 +1,29 @@
+.opt-kanban form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.opt-kanban input { min-width: 0; max-width: 100%; }
+.opt-kanban-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 1rem;
+  overflow-x: auto;
+  align-items: start;
+}
+.opt-kanban-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+}
+.opt-kanban-column, .opt-kanban-card {
+  border: 1px solid currentColor;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-wrap: anywhere;
+}
+.opt-kanban-card + .opt-kanban-card { margin-top: 0.75rem; }
+.opt-kanban-controls { display: flex; flex-wrap: wrap; gap: 0.5rem; }

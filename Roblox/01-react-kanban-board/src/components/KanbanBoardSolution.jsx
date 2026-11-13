@@ -1,6 +1,7 @@
-import "./KanbanBoard.css";
-import React, { useState } from "react";
-import { columns, SANITIZED_COL_NAMES, BOARDS } from "../data/kanbanData.js";
+/* eslint-disable no-unused-vars */
+import './KanbanBoard.css';
+import React, { useState } from 'react';
+import { columns, SANITIZED_COL_NAMES, BOARDS } from '../data/kanbanData.js';
 
 export default function KanbanBoardSolution() {
   const [tasks, setTasks] = useState(BOARDS);
@@ -21,7 +22,7 @@ export default function KanbanBoardSolution() {
   function onDeleteClick(id, currColIdx) {
     const currCol = SANITIZED_COL_NAMES[currColIdx];
 
-    console.log("DEL:", id, currCol);
+    console.log('DEL:', id, currCol);
     setTasks((prev) => {
       const tasks = prev[currCol].filter((task) => task.id !== id);
       return { ...prev, [currCol]: tasks };
@@ -29,7 +30,6 @@ export default function KanbanBoardSolution() {
   }
 
   function addTaskClick(currColIdx) {
-    console.log("ADD:", currColIdx);
     setShowAddTaskModel((prev) => !prev);
   }
   return (
@@ -46,26 +46,17 @@ export default function KanbanBoardSolution() {
   );
 }
 
-function Columns({
-  columns,
-  tasks,
-  onButtonHandler,
-  onDeleteClick,
-  addTaskClick,
-}) {
+function Columns({ columns, tasks, onButtonHandler, onDeleteClick, addTaskClick }) {
   return (
     <section className="cols-container">
       {columns.map((col, colIdx) => {
-        const sanitizedColName = col.name.toLowerCase().replace(" ", "");
+        const sanitizedColName = col.name.toLowerCase().replace(' ', '');
 
         return (
           <div className="col-container" key={col.id}>
             <h2 className="col-header">
-              {col.name} ({tasks[sanitizedColName].length}){" "}
-              <button
-                className="add-task-button"
-                onClick={() => addTaskClick(colIdx)}
-              >
+              {col.name} ({tasks[sanitizedColName].length}){' '}
+              <button className="add-task-button" onClick={() => addTaskClick(colIdx)}>
                 +
               </button>
             </h2>
@@ -99,23 +90,14 @@ function Card({ task, onButtonHandler, colIdx, onDeleteClick }) {
         <div className="card-description">{task.description}</div>
       </div>
       <div className="card-nav-container">
-        <button
-          onClick={() => onButtonHandler(task.id, colIdx, colIdx - 1)}
-          disabled={colIdx === 0}
-        >
-          {"< "} Left
+        <button onClick={() => onButtonHandler(task.id, colIdx, colIdx - 1)} disabled={colIdx === 0}>
+          {'< '} Left
         </button>
-        <button
-          id={"delete-button"}
-          onClick={() => onDeleteClick(task.id, colIdx)}
-        >
+        <button id={'delete-button'} onClick={() => onDeleteClick(task.id, colIdx)}>
           Delete
         </button>
-        <button
-          onClick={() => onButtonHandler(task.id, colIdx, colIdx + 1)}
-          disabled={colIdx === 2}
-        >
-          Right{" >"}
+        <button onClick={() => onButtonHandler(task.id, colIdx, colIdx + 1)} disabled={colIdx === 2}>
+          Right{' >'}
         </button>
       </div>
     </div>
