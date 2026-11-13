@@ -5,6 +5,8 @@ import { tasksAPI } from '../data/kanbanData.js';
 export default function KanbanBoard() {
   const [data, setData] = useState({});
 
+  // call api to get tasks
+
   return (
     <section className="board-container">
       Start on src/components/KanbanBoard.jsx
